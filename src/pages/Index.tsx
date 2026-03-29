@@ -171,8 +171,9 @@ export default function Index() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(8,15,35,0.82) 0%, rgba(8,15,35,0.65) 55%, rgba(8,15,35,0.4) 100%)" }} />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 pt-28 pb-20 relative z-10">
-          <div className="max-w-2xl">
+        <div className="container mx-auto px-6 md:px-12 pt-28 pb-20 relative z-10 flex items-center justify-between gap-8">
+          {/* Left: text */}
+          <div className="max-w-xl flex-shrink-0">
             <div
               className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-xs font-golos font-semibold tracking-widest uppercase animate-fade-in-up"
               style={{ border: "1.5px solid rgba(100,210,230,0.4)", color: "rgb(130,220,240)", background: "rgba(100,210,230,0.1)" }}
@@ -216,6 +217,28 @@ export default function Index() {
                   <div className="font-golos text-xs mt-0.5 tracking-wide" style={{ color: "rgba(255,255,255,0.55)" }}>{label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Right: two founders photos */}
+          <div className="hidden lg:flex items-end gap-0 flex-shrink-0 relative animate-fade-in-up delay-300" style={{ opacity: 0, height: "540px" }}>
+            {/* Photo 1 — back-left, slightly smaller */}
+            <div className="relative" style={{ width: 220, marginBottom: 0, marginRight: -30, zIndex: 1 }}>
+              <img
+                src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/7b46da5b-5cd4-454d-84bb-53c94b3f9cf3.png"
+                alt="Основатель"
+                className="w-full object-contain drop-shadow-2xl"
+                style={{ height: 460, objectPosition: "top" }}
+              />
+            </div>
+            {/* Photo 2 — front-right, taller */}
+            <div className="relative" style={{ width: 250, zIndex: 2 }}>
+              <img
+                src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/95e3838a-aefd-48c3-8de0-87bb460e0fa9.png"
+                alt="Основатель"
+                className="w-full object-contain drop-shadow-2xl"
+                style={{ height: 520, objectPosition: "top" }}
+              />
             </div>
           </div>
         </div>
