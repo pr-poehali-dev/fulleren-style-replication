@@ -4,16 +4,7 @@ import Icon from "@/components/ui/icon";
 const CENTER_IMAGE = "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/files/4e6db7fc-54e4-43f6-95a3-6cafda6eb9fe.jpg";
 const FOUNDER_IMAGE = "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/files/286caf21-0e46-4b31-8ff2-33eba94bccd7.jpg";
 
-const COURSES = [
-  { id: 1, title: "Квантовое мышление", category: "Психология", level: "Начинающий", duration: "3 месяца", students: 128, tag: "Хит" },
-  { id: 2, title: "Нейропедагогика", category: "Педагогика", level: "Средний", duration: "2 месяца", students: 94, tag: "Новый" },
-  { id: 3, title: "Детская психология", category: "Психология", level: "Начинающий", duration: "4 месяца", students: 210, tag: "Хит" },
-  { id: 4, title: "Системное обучение", category: "Педагогика", level: "Продвинутый", duration: "3 месяца", students: 67, tag: null },
-  { id: 5, title: "Арт-терапия", category: "Терапия", level: "Начинающий", duration: "2 месяца", students: 155, tag: null },
-  { id: 6, title: "Коучинг и развитие", category: "Коучинг", level: "Средний", duration: "3 месяца", students: 76, tag: "Новый" },
-  { id: 7, title: "Семейная психология", category: "Психология", level: "Средний", duration: "4 месяца", students: 88, tag: null },
-  { id: 8, title: "Методология обучения", category: "Педагогика", level: "Продвинутый", duration: "5 месяцев", students: 42, tag: null },
-];
+
 
 const DIRECTIONS = [
   { icon: "Brain", title: "Квантовая психология", desc: "Современные методы работы с сознанием, мышлением и эмоциональным интеллектом", count: 11 },
@@ -38,8 +29,6 @@ const MEETUPS = [
   { icon: "Globe", title: "Международный форум", desc: "Ежегодный форум центра с участием зарубежных специалистов в области нейронауки, квантовой психологии и педагогики.", date: "1 раз в год", format: "Очно" },
 ];
 
-const CATEGORIES = ["Все", "Психология", "Педагогика", "Терапия", "Коучинг"];
-const LEVELS = ["Все уровни", "Начинающий", "Средний", "Продвинутый"];
 
 const FOUNDERS = [
   {
@@ -57,8 +46,6 @@ const FOUNDERS = [
 ];
 
 export default function Index() {
-  const [activeCategory, setActiveCategory] = useState("Все");
-  const [activeLevel, setActiveLevel] = useState("Все уровни");
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -68,12 +55,6 @@ export default function Index() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const filteredCourses = COURSES.filter((c) => {
-    const catOk = activeCategory === "Все" || c.category === activeCategory;
-    const lvlOk = activeLevel === "Все уровни" || c.level === activeLevel;
-    return catOk && lvlOk;
-  });
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -289,66 +270,6 @@ export default function Index() {
             ))}
           </div>
 
-          {/* Course catalog */}
-          <div className="pt-10" style={{ borderTop: "1px solid hsl(var(--border))" }}>
-            <h3 className="font-cormorant text-3xl md:text-4xl font-light mb-8">Каталог курсов</h3>
-
-            <div className="flex flex-wrap gap-2.5 mb-3">
-              {CATEGORIES.map((cat) => (
-                <button key={cat} className={`filter-chip ${activeCategory === cat ? "active" : ""}`}
-                  onClick={() => setActiveCategory(cat)}>{cat}</button>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-2.5 mb-10">
-              {LEVELS.map((lvl) => (
-                <button key={lvl} className={`filter-chip ${activeLevel === lvl ? "active" : ""}`}
-                  onClick={() => setActiveLevel(lvl)}>{lvl}</button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {filteredCourses.map((course) => (
-                <div key={course.id} className="card-hover group p-5 rounded-2xl relative"
-                  style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}>
-                  {course.tag && (
-                    <span className="absolute top-4 right-4 text-xs font-golos font-semibold px-2.5 py-1 rounded-full"
-                      style={{ background: "hsl(var(--teal))", color: "#fff" }}>
-                      {course.tag}
-                    </span>
-                  )}
-                  <div className="mb-2">
-                    <span className="text-xs font-golos font-semibold tracking-wide" style={{ color: "hsl(var(--teal))" }}>{course.category}</span>
-                  </div>
-                  <h4 className="font-cormorant text-lg font-semibold mb-3 leading-snug pr-10">{course.title}</h4>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="text-xs font-golos px-2.5 py-1 rounded-lg" style={{ background: "hsl(var(--section-alt))", color: "hsl(var(--muted-foreground))" }}>
-                      {course.level}
-                    </span>
-                    <span className="text-xs font-golos px-2.5 py-1 rounded-lg" style={{ background: "hsl(var(--section-alt))", color: "hsl(var(--muted-foreground))" }}>
-                      {course.duration}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>
-                      <Icon name="Users" size={12} />
-                      <span className="font-golos">{course.students} участников</span>
-                    </div>
-                    <button className="w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-                      style={{ background: "hsl(var(--blue))", color: "#fff" }}>
-                      <Icon name="ArrowRight" size={14} />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {filteredCourses.length === 0 && (
-              <div className="py-16 text-center">
-                <p className="font-cormorant text-2xl" style={{ color: "hsl(var(--muted-foreground))" }}>Курсы не найдены</p>
-                <p className="font-golos text-sm mt-2" style={{ color: "hsl(var(--muted-foreground))" }}>Попробуйте изменить фильтры</p>
-              </div>
-            )}
-          </div>
         </div>
       </section>
 
