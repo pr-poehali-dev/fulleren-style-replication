@@ -35,7 +35,7 @@ const FOUNDERS = [
     name: "Анна Воронова",
     role: "Основатель и научный директор",
     bio: "Доктор психологических наук, практикующий психолог с 20-летним стажем. Создала Центр в 2012 году, объединив передовые научные исследования и практики квантовой психологии.",
-    image: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8783feb6-fe96-43aa-b89b-76e5a1f80b82.jpg",
+    image: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/b21103cd-9d60-41db-8c7e-ef414e06267a.png",
   },
   {
     name: "Михаил Соколов",
