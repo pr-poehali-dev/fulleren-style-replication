@@ -7,13 +7,13 @@ const FOUNDER_IMAGE = "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-
 
 
 const DIRECTIONS = [
-  { icon: "Brain", title: "Квантовая психология", desc: "Современные методы работы с сознанием, мышлением и эмоциональным интеллектом", count: 11 },
-  { icon: "GraduationCap", title: "Инновационная педагогика", desc: "Передовые подходы к обучению и воспитанию детей и взрослых", count: 9 },
-  { icon: "Heart", title: "Арт-терапия", desc: "Исцеление и развитие через творчество, рисунок, музыку и движение", count: 7 },
-  { icon: "Users", title: "Семейные практики", desc: "Гармония в семье, детско-родительские отношения, системные расстановки", count: 8 },
-  { icon: "Sparkles", title: "Коучинг", desc: "Личностный рост, раскрытие потенциала и достижение жизненных целей", count: 6 },
-  { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5 },
-  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4 },
+  { icon: "Brain", title: "Квантовая психология", desc: "Современные методы работы с сознанием, мышлением и эмоциональным интеллектом", count: 11, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/48d26136-c533-4c2a-978b-a2c70e3cfbff.png" },
+  { icon: "GraduationCap", title: "Инновационная педагогика", desc: "Передовые подходы к обучению и воспитанию детей и взрослых", count: 9, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2a47d22c-3843-4ffa-ab00-9e0b6df80822.png" },
+  { icon: "Heart", title: "Арт-терапия", desc: "Исцеление и развитие через творчество, рисунок, музыку и движение", count: 7, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png" },
+  { icon: "Users", title: "Семейные практики", desc: "Гармония в семье, детско-родительские отношения, системные расстановки", count: 8, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8064f6c5-0140-494c-9653-5ff4fcbee61c.jpg" },
+  { icon: "Sparkles", title: "Коучинг", desc: "Личностный рост, раскрытие потенциала и достижение жизненных целей", count: 6, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/5efdd7f9-fc3f-48cf-b3e7-9324838045c0.png" },
+  { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5, bg: null },
+  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4, bg: null },
 ];
 
 const CLUBS = [
@@ -356,20 +356,30 @@ export default function Index() {
             {DIRECTIONS.map((dir) => (
               <div
                 key={dir.title}
-                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+                className="card-hover group p-7 rounded-2xl relative overflow-hidden flex flex-col"
+                style={dir.bg
+                  ? { border: "1.5px solid rgba(255,255,255,0.1)", minHeight: 220 }
+                  : { background: "#fff", border: "1.5px solid hsl(var(--border))", minHeight: 220 }
+                }
               >
-                <div
-                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "hsl(var(--blue) / 0.05)", transform: "translate(30%, -30%)" }}
-                />
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: "hsl(var(--blue) / 0.09)" }}>
-                  <Icon name={dir.icon} fallback="Sparkles" size={22} style={{ color: "hsl(var(--blue))" }} />
+                {dir.bg && (
+                  <>
+                    <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${dir.bg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                    <div className="absolute inset-0 z-0" style={{ background: "rgba(0,0,0,0.72)" }} />
+                  </>
+                )}
+                <div className="relative z-10 flex flex-col flex-1">
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                    style={dir.bg
+                      ? { background: "rgba(255,255,255,0.1)", backdropFilter: "blur(6px)" }
+                      : { background: "hsl(var(--blue) / 0.09)" }
+                    }>
+                    <Icon name={dir.icon} fallback="Sparkles" size={22} style={{ color: dir.bg ? "#fff" : "hsl(var(--blue))" }} />
+                  </div>
+                  <h3 className="font-cormorant text-xl font-semibold mb-2" style={{ color: dir.bg ? "#fff" : "inherit" }}>{dir.title}</h3>
+                  <p className="font-golos text-sm leading-relaxed mb-4 flex-1" style={{ color: dir.bg ? "rgba(255,255,255,0.65)" : "hsl(var(--muted-foreground))" }}>{dir.desc}</p>
+                  <span className="font-golos text-xs font-semibold" style={{ color: dir.bg ? "rgba(255,255,255,0.5)" : "hsl(var(--teal))" }}>{dir.count} программ</span>
                 </div>
-                <h3 className="font-cormorant text-xl font-semibold mb-2">{dir.title}</h3>
-                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{dir.desc}</p>
-                <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{dir.count} программ</span>
               </div>
             ))}
           </div>
