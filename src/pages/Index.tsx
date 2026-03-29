@@ -22,6 +22,20 @@ const DIRECTIONS = [
   { icon: "Users", title: "Семейные практики", desc: "Гармония в семье, детско-родительские отношения, системные расстановки", count: 8 },
   { icon: "Sparkles", title: "Коучинг", desc: "Личностный рост, раскрытие потенциала и достижение жизненных целей", count: 6 },
   { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5 },
+  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4 },
+];
+
+const CLUBS = [
+  { icon: "FlaskConical", title: "Клуб квантовых практиков", desc: "Закрытое сообщество для тех, кто уже прошёл базовые программы центра. Ежемесячные встречи, разборы случаев и обмен опытом.", members: 84 },
+  { icon: "TreePine", title: "Родительский клуб", desc: "Пространство для родителей, которые хотят строить осознанные отношения с детьми, опираясь на нейронауку и квантовую педагогику.", members: 120 },
+  { icon: "Compass", title: "Клуб личной трансформации", desc: "Интенсивное сообщество для тех, кто находится в процессе глубоких изменений: работа с идентичностью, целями и жизненным смыслом.", members: 57 },
+];
+
+const MEETUPS = [
+  { icon: "Mic", title: "Открытые лекции", desc: "Бесплатные публичные лекции от ведущих специалистов центра и приглашённых экспертов — каждый второй вторник месяца.", date: "Каждые 2 недели", format: "Онлайн / Очно" },
+  { icon: "MessageCircle", title: "Супервизионные группы", desc: "Профессиональные встречи для педагогов и психологов: разбор сложных случаев, обмен методиками, поддержка коллег.", date: "Еженедельно", format: "Очно" },
+  { icon: "Sunrise", title: "Утренние практики", desc: "Еженедельные сессии по квантовым медитациям и телесным практикам в малых группах. Идеально для начала недели.", date: "По понедельникам", format: "Очно / Онлайн" },
+  { icon: "Globe", title: "Международный форум", desc: "Ежегодный форум центра с участием зарубежных специалистов в области нейронауки, квантовой психологии и педагогики.", date: "1 раз в год", format: "Очно" },
 ];
 
 const CATEGORIES = ["Все", "Психология", "Педагогика", "Терапия", "Коучинг"];
@@ -334,6 +348,96 @@ export default function Index() {
                 <p className="font-golos text-sm mt-2" style={{ color: "hsl(var(--muted-foreground))" }}>Попробуйте изменить фильтры</p>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CLUBS ── */}
+      <section className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="section-label mb-3">Сообщество</p>
+              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
+                Клубы и<br />сообщества
+              </h2>
+            </div>
+            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+              Закрытые пространства для глубокого общения, практики и профессионального роста
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {CLUBS.map((club) => (
+              <div
+                key={club.title}
+                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
+                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+              >
+                <div
+                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: "hsl(var(--teal) / 0.05)", transform: "translate(30%, -30%)" }}
+                />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: "hsl(var(--teal) / 0.1)" }}>
+                  <Icon name={club.icon} fallback="Users" size={22} style={{ color: "hsl(var(--teal))" }} />
+                </div>
+                <h3 className="font-cormorant text-xl font-semibold mb-2">{club.title}</h3>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{club.desc}</p>
+                <div className="flex items-center gap-1.5">
+                  <Icon name="Users" size={12} style={{ color: "hsl(var(--teal))" }} />
+                  <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{club.members} участников</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MEETUPS ── */}
+      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="section-label mb-3">Мероприятия</p>
+              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
+                Встречи
+              </h2>
+            </div>
+            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+              Регулярные очные и онлайн-форматы для развития, общения и обмена знаниями
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {MEETUPS.map((meetup) => (
+              <div
+                key={meetup.title}
+                className="card-hover group p-6 rounded-2xl relative overflow-hidden flex flex-col"
+                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+              >
+                <div
+                  className="absolute top-0 right-0 w-24 h-24 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: "hsl(var(--blue) / 0.05)", transform: "translate(30%, -30%)" }}
+                />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: "hsl(var(--blue) / 0.09)" }}>
+                  <Icon name={meetup.icon} fallback="Calendar" size={22} style={{ color: "hsl(var(--blue))" }} />
+                </div>
+                <h3 className="font-cormorant text-xl font-semibold mb-2">{meetup.title}</h3>
+                <p className="font-golos text-sm leading-relaxed mb-5 flex-1" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.desc}</p>
+                <div className="space-y-1.5 mt-auto">
+                  <div className="flex items-center gap-2">
+                    <Icon name="Clock" size={11} style={{ color: "hsl(var(--blue))" }} />
+                    <span className="font-golos text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="MapPin" size={11} style={{ color: "hsl(var(--blue))" }} />
+                    <span className="font-golos text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.format}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
