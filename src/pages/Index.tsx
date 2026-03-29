@@ -97,8 +97,7 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-4 flex items-center justify-between"
         style={{ backdropFilter: "blur(20px)", background: "hsl(20 10% 6% / 0.85)", borderBottom: "1px solid hsl(var(--border))" }}>
         <button onClick={() => scrollTo("home")} className="font-cormorant text-xl font-semibold tracking-wide">
-          <span className="gradient-text">Центр</span>
-          <span style={{ color: "hsl(var(--foreground) / 0.6)", marginLeft: "4px" }}>Творчества</span>
+          <span className="gradient-text">ЦКПиП</span>
         </button>
 
         <ul className="hidden md:flex items-center gap-8">
