@@ -163,7 +163,7 @@ export default function Index() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/296abdaf-d231-43ba-bfdd-75d4eac15504.png"
+            src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/16d29147-af1f-494a-ad66-5570977b1b4b.jpg"
             alt="quantum background"
             className="w-full h-full object-cover"
           />
