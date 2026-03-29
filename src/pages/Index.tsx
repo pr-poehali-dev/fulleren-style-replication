@@ -233,90 +233,8 @@ export default function Index() {
         </div>
       </div>
 
-      {/* ── DIRECTIONS ── */}
-      <section id="directions" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-            <div>
-              <p className="section-label mb-3">Направления</p>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Наши<br />направления
-              </h2>
-            </div>
-            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Шесть специализированных направлений, разработанных командой учёных и практиков
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
-            {DIRECTIONS.map((dir) => (
-              <div
-                key={dir.title}
-                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
-              >
-                <div
-                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "hsl(var(--blue) / 0.05)", transform: "translate(30%, -30%)" }}
-                />
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: "hsl(var(--blue) / 0.09)" }}>
-                  <Icon name={dir.icon} fallback="Sparkles" size={22} style={{ color: "hsl(var(--blue))" }} />
-                </div>
-                <h3 className="font-cormorant text-xl font-semibold mb-2">{dir.title}</h3>
-                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{dir.desc}</p>
-                <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{dir.count} программ</span>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── CLUBS ── */}
-      <section className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-            <div>
-              <p className="section-label mb-3">Сообщество</p>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Клубы и<br />сообщества
-              </h2>
-            </div>
-            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Закрытые пространства для глубокого общения, практики и профессионального роста
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {CLUBS.map((club) => (
-              <div
-                key={club.title}
-                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
-              >
-                <div
-                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "hsl(var(--teal) / 0.05)", transform: "translate(30%, -30%)" }}
-                />
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: "hsl(var(--teal) / 0.1)" }}>
-                  <Icon name={club.icon} fallback="Users" size={22} style={{ color: "hsl(var(--teal))" }} />
-                </div>
-                <h3 className="font-cormorant text-xl font-semibold mb-2">{club.title}</h3>
-                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{club.desc}</p>
-                <div className="flex items-center gap-1.5">
-                  <Icon name="Users" size={12} style={{ color: "hsl(var(--teal))" }} />
-                  <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{club.members} участников</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── MEETUPS ── */}
-      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
+      <section className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
@@ -363,8 +281,89 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ── CLUBS ── */}
+      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="section-label mb-3">Сообщество</p>
+              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
+                Клубы и<br />сообщества
+              </h2>
+            </div>
+            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+              Закрытые пространства для глубокого общения, практики и профессионального роста
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {CLUBS.map((club) => (
+              <div
+                key={club.title}
+                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
+                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+              >
+                <div
+                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: "hsl(var(--teal) / 0.05)", transform: "translate(30%, -30%)" }}
+                />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: "hsl(var(--teal) / 0.1)" }}>
+                  <Icon name={club.icon} fallback="Users" size={22} style={{ color: "hsl(var(--teal))" }} />
+                </div>
+                <h3 className="font-cormorant text-xl font-semibold mb-2">{club.title}</h3>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{club.desc}</p>
+                <div className="flex items-center gap-1.5">
+                  <Icon name="Users" size={12} style={{ color: "hsl(var(--teal))" }} />
+                  <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{club.members} участников</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DIRECTIONS ── */}
+      <section id="directions" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="section-label mb-3">Направления</p>
+              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
+                Наши<br />направления
+              </h2>
+            </div>
+            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+              Шесть специализированных направлений, разработанных командой учёных и практиков
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+            {DIRECTIONS.map((dir) => (
+              <div
+                key={dir.title}
+                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
+                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+              >
+                <div
+                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: "hsl(var(--blue) / 0.05)", transform: "translate(30%, -30%)" }}
+                />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                  style={{ background: "hsl(var(--blue) / 0.09)" }}>
+                  <Icon name={dir.icon} fallback="Sparkles" size={22} style={{ color: "hsl(var(--blue))" }} />
+                </div>
+                <h3 className="font-cormorant text-xl font-semibold mb-2">{dir.title}</h3>
+                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{dir.desc}</p>
+                <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{dir.count} программ</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── ABOUT ── */}
-      <section id="about" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
+      <section id="about" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative">
