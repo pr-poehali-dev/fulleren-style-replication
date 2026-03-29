@@ -17,9 +17,9 @@ const DIRECTIONS = [
 ];
 
 const CLUBS = [
-  { icon: "FlaskConical", title: "Клуб квантовых практиков", desc: "Закрытое сообщество для тех, кто уже прошёл базовые программы центра. Ежемесячные встречи, разборы случаев и обмен опытом.", members: 84 },
-  { icon: "TreePine", title: "Родительский клуб", desc: "Пространство для родителей, которые хотят строить осознанные отношения с детьми, опираясь на нейронауку и квантовую педагогику.", members: 120 },
-  { icon: "Compass", title: "Клуб личной трансформации", desc: "Интенсивное сообщество для тех, кто находится в процессе глубоких изменений: работа с идентичностью, целями и жизненным смыслом.", members: 57 },
+  { icon: "FlaskConical", title: "Клуб квантовых практиков", desc: "Закрытое сообщество для тех, кто уже прошёл базовые программы центра. Ежемесячные встречи, разборы случаев и обмен опытом.", members: 84, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2660bb1c-4f22-45e9-bdd3-e174569dcfb4.png" },
+  { icon: "TreePine", title: "Родительский клуб", desc: "Пространство для родителей, которые хотят строить осознанные отношения с детьми, опираясь на нейронауку и квантовую педагогику.", members: 120, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/af3294b0-de3a-4622-8180-0d6e976f926b.png" },
+  { icon: "Compass", title: "Клуб личной трансформации", desc: "Интенсивное сообщество для тех, кто находится в процессе глубоких изменений: работа с идентичностью, целями и жизненным смыслом.", members: 57, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/03c49ab7-8ac6-48c9-928b-a7e7f61fb947.png" },
 ];
 
 const MEETUPS = [
@@ -307,22 +307,29 @@ export default function Index() {
             {CLUBS.map((club) => (
               <div
                 key={club.title}
-                className="card-hover group p-7 rounded-2xl relative overflow-hidden"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+                className="card-hover group p-7 rounded-2xl relative overflow-hidden flex flex-col"
+                style={{ border: "1.5px solid rgba(255,255,255,0.1)", minHeight: 260 }}
               >
                 <div
-                  className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "hsl(var(--teal) / 0.05)", transform: "translate(30%, -30%)" }}
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `url(${club.bg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 />
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: "hsl(var(--teal) / 0.1)" }}>
-                  <Icon name={club.icon} fallback="Users" size={22} style={{ color: "hsl(var(--teal))" }} />
-                </div>
-                <h3 className="font-cormorant text-xl font-semibold mb-2">{club.title}</h3>
-                <p className="font-golos text-sm leading-relaxed mb-4" style={{ color: "hsl(var(--muted-foreground))" }}>{club.desc}</p>
-                <div className="flex items-center gap-1.5">
-                  <Icon name="Users" size={12} style={{ color: "hsl(var(--teal))" }} />
-                  <span className="font-golos text-xs font-semibold" style={{ color: "hsl(var(--teal))" }}>{club.members} участников</span>
+                <div className="absolute inset-0 z-0" style={{ background: "rgba(0,0,0,0.72)" }} />
+                <div className="relative z-10 flex flex-col flex-1">
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                    style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(6px)" }}>
+                    <Icon name={club.icon} fallback="Users" size={22} style={{ color: "#fff" }} />
+                  </div>
+                  <h3 className="font-cormorant text-xl font-semibold mb-2" style={{ color: "#fff" }}>{club.title}</h3>
+                  <p className="font-golos text-sm leading-relaxed mb-4 flex-1" style={{ color: "rgba(255,255,255,0.65)" }}>{club.desc}</p>
+                  <div className="flex items-center gap-1.5 mt-auto">
+                    <Icon name="Users" size={12} style={{ color: "rgba(255,255,255,0.5)" }} />
+                    <span className="font-golos text-xs font-semibold" style={{ color: "rgba(255,255,255,0.5)" }}>{club.members} участников</span>
+                  </div>
                 </div>
               </div>
             ))}
