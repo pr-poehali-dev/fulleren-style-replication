@@ -12,8 +12,8 @@ const DIRECTIONS = [
   { icon: "Heart", title: "Арт-терапия", desc: "Исцеление и развитие через творчество, рисунок, музыку и движение", count: 7, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png" },
   { icon: "Users", title: "Семейные практики", desc: "Гармония в семье, детско-родительские отношения, системные расстановки", count: 8, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8064f6c5-0140-494c-9653-5ff4fcbee61c.jpg" },
   { icon: "Sparkles", title: "Коучинг", desc: "Личностный рост, раскрытие потенциала и достижение жизненных целей", count: 6, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/5efdd7f9-fc3f-48cf-b3e7-9324838045c0.png" },
-  { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5, bg: null },
-  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4, bg: null },
+  { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8aa13d10-72a9-4f3f-99de-6c6a095a1ba3.png" },
+  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/d8ce199e-0b41-4efd-a7d1-ee84d8f75640.png" },
 ];
 
 const CLUBS = [
