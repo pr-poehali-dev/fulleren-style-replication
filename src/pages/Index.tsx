@@ -159,34 +159,35 @@ export default function Index() {
       )}
 
       {/* ── HERO ── */}
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden hero-glow">
-        {/* Orbital rings */}
-        <div className="orbital animate-spin-slow" style={{ width: 420, height: 420, top: "50%", right: "-80px", marginTop: -210 }} />
-        <div className="orbital animate-spin-rev" style={{ width: 280, height: 280, top: "50%", right: "30px", marginTop: -140 }} />
-        <div className="orbital" style={{ width: 600, height: 600, top: "50%", right: "-200px", marginTop: -300, opacity: 0.5 }} />
-
-        {/* Floating molecule nodes */}
-        <div className="absolute animate-float" style={{ width: 12, height: 12, borderRadius: "50%", background: "hsl(var(--teal))", top: "28%", right: "18%", opacity: 0.7 }} />
-        <div className="absolute animate-float delay-200" style={{ width: 8, height: 8, borderRadius: "50%", background: "hsl(var(--blue))", top: "62%", right: "12%", opacity: 0.5 }} />
-        <div className="absolute animate-float delay-400" style={{ width: 16, height: 16, borderRadius: "50%", background: "hsl(var(--teal-light) / 0.4)", border: "2px solid hsl(var(--teal))", top: "42%", right: "35%", opacity: 0.6 }} />
+      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/296abdaf-d231-43ba-bfdd-75d4eac15504.png"
+            alt="quantum background"
+            className="w-full h-full object-cover"
+          />
+          {/* Darkening overlay */}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(8,15,35,0.82) 0%, rgba(8,15,35,0.65) 55%, rgba(8,15,35,0.4) 100%)" }} />
+        </div>
 
         <div className="container mx-auto px-6 md:px-12 pt-28 pb-20 relative z-10">
           <div className="max-w-2xl">
             <div
               className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-xs font-golos font-semibold tracking-widest uppercase animate-fade-in-up"
-              style={{ border: "1.5px solid hsl(var(--teal) / 0.35)", color: "hsl(var(--teal))", background: "hsl(var(--teal) / 0.07)" }}
+              style={{ border: "1.5px solid rgba(100,210,230,0.4)", color: "rgb(130,220,240)", background: "rgba(100,210,230,0.1)" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "hsl(var(--teal))" }} />
+              <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "rgb(130,220,240)" }} />
               Образовательный центр · с 2012 года
             </div>
 
-            <h1 className="font-cormorant font-light leading-[1.05] mb-5 animate-fade-in-up delay-100" style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)", opacity: 0 }}>
+            <h1 className="font-cormorant font-light leading-[1.05] mb-5 animate-fade-in-up delay-100 text-white" style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)", opacity: 0 }}>
               Центр квантовой<br />
               педагогики и психологии<br />
-              <em className="gradient-text not-italic">Фуллерен</em>
+              <em className="not-italic" style={{ background: "linear-gradient(130deg, #7dd8f0, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Фуллерен</em>
             </h1>
 
-            <p className="font-golos text-base md:text-lg max-w-lg mb-10 animate-fade-in-up delay-200 leading-relaxed" style={{ opacity: 0, color: "hsl(var(--muted-foreground))" }}>
+            <p className="font-golos text-base md:text-lg max-w-lg mb-10 animate-fade-in-up delay-200 leading-relaxed" style={{ opacity: 0, color: "rgba(255,255,255,0.65)" }}>
               Передовые методы развития личности, основанные на современной нейронауке, психологии и инновационной педагогике.
             </p>
 
@@ -194,25 +195,25 @@ export default function Index() {
               <button
                 onClick={() => scrollTo("directions")}
                 className="px-8 py-3.5 rounded-full font-golos font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                style={{ background: "hsl(var(--blue))", color: "#fff", boxShadow: "0 4px 20px hsl(var(--blue) / 0.3)" }}
+                style={{ background: "hsl(var(--blue))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--blue) / 0.5)" }}
               >
                 Наши курсы
               </button>
               <button
                 onClick={() => scrollTo("about")}
-                className="px-8 py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300 hover:border-[hsl(var(--blue))] hover:text-[hsl(var(--blue))]"
-                style={{ border: "1.5px solid hsl(var(--border))", color: "hsl(var(--muted-foreground))" }}
+                className="px-8 py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300"
+                style={{ border: "1.5px solid rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.75)", backdropFilter: "blur(8px)" }}
               >
                 О центре
               </button>
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-10 mt-14 pt-8 animate-fade-in-up delay-400" style={{ opacity: 0, borderTop: "1px solid hsl(var(--border))" }}>
+            <div className="flex flex-wrap gap-10 mt-14 pt-8 animate-fade-in-up delay-400" style={{ opacity: 0, borderTop: "1px solid rgba(255,255,255,0.15)" }}>
               {[["1000+", "Выпускников"], ["50+", "Программ"], ["25+", "Специалистов"], ["12", "Лет опыта"]].map(([num, label]) => (
                 <div key={label}>
-                  <div className="font-cormorant text-3xl md:text-4xl font-light gradient-text">{num}</div>
-                  <div className="font-golos text-xs mt-0.5 tracking-wide" style={{ color: "hsl(var(--muted-foreground))" }}>{label}</div>
+                  <div className="font-cormorant text-3xl md:text-4xl font-light" style={{ color: "#7dd8f0" }}>{num}</div>
+                  <div className="font-golos text-xs mt-0.5 tracking-wide" style={{ color: "rgba(255,255,255,0.55)" }}>{label}</div>
                 </div>
               ))}
             </div>
