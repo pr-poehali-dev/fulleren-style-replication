@@ -253,26 +253,33 @@ export default function Index() {
               <div
                 key={meetup.title}
                 className="card-hover group p-6 rounded-2xl relative overflow-hidden flex flex-col"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}
+                style={{ border: "1.5px solid rgba(255,255,255,0.1)", minHeight: 280 }}
               >
                 <div
-                  className="absolute top-0 right-0 w-24 h-24 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "hsl(var(--blue) / 0.05)", transform: "translate(30%, -30%)" }}
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `url(https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/72fd8e60-d0ef-47fd-9d56-a1368875f9f0.jpg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 />
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: "hsl(var(--blue) / 0.09)" }}>
-                  <Icon name={meetup.icon} fallback="Calendar" size={22} style={{ color: "hsl(var(--blue))" }} />
-                </div>
-                <h3 className="font-cormorant text-xl font-semibold mb-2">{meetup.title}</h3>
-                <p className="font-golos text-sm leading-relaxed mb-5 flex-1" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.desc}</p>
-                <div className="space-y-1.5 mt-auto">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Clock" size={11} style={{ color: "hsl(var(--blue))" }} />
-                    <span className="font-golos text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.date}</span>
+                <div className="absolute inset-0 z-0" style={{ background: "rgba(0,0,0,0.72)" }} />
+                <div className="relative z-10 flex flex-col flex-1">
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                    style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(6px)" }}>
+                    <Icon name={meetup.icon} fallback="Calendar" size={22} style={{ color: "#fff" }} />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={11} style={{ color: "hsl(var(--blue))" }} />
-                    <span className="font-golos text-xs" style={{ color: "hsl(var(--muted-foreground))" }}>{meetup.format}</span>
+                  <h3 className="font-cormorant text-xl font-semibold mb-2" style={{ color: "#fff" }}>{meetup.title}</h3>
+                  <p className="font-golos text-sm leading-relaxed mb-5 flex-1" style={{ color: "rgba(255,255,255,0.65)" }}>{meetup.desc}</p>
+                  <div className="space-y-1.5 mt-auto">
+                    <div className="flex items-center gap-2">
+                      <Icon name="Clock" size={11} style={{ color: "rgba(255,255,255,0.5)" }} />
+                      <span className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>{meetup.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="MapPin" size={11} style={{ color: "rgba(255,255,255,0.5)" }} />
+                      <span className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>{meetup.format}</span>
+                    </div>
                   </div>
                 </div>
               </div>
