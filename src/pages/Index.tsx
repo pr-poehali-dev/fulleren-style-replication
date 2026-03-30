@@ -66,7 +66,7 @@ export default function Index() {
 
   const navItems = [
     { id: "home", label: "Главная" },
-    { id: "directions", label: "Направления" },
+    { id: "directions", label: "Курсы" },
     { id: "meetups", label: "Встречи" },
     { id: "clubs", label: "Сообщества" },
     { id: "about", label: "О Центре" },
@@ -406,7 +406,7 @@ export default function Index() {
             <div>
 
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Наши<br />направления
+                Наши<br />курсы
               </h2>
             </div>
             <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
