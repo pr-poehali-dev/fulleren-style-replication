@@ -179,11 +179,14 @@ export default function Index() {
         <div className="container mx-auto px-6 md:px-12 pt-28 pb-20 relative z-10">
           <div className="max-w-xl">
             <div
-              className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-xs font-golos font-semibold tracking-widest uppercase animate-fade-in-up"
+              className="inline-flex flex-col items-center gap-1 mb-7 px-4 py-2 rounded-full text-xs font-golos font-semibold tracking-widest uppercase animate-fade-in-up md:flex-row md:gap-2"
               style={{ border: "1.5px solid rgba(232,213,176,0.4)", color: "rgb(232,213,176)", background: "rgba(232,213,176,0.08)" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "rgb(232,213,176)" }} />
-              Центр поддержки семьи · с 2017 года
+              <span className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "rgb(232,213,176)" }} />
+                Центр поддержки семьи
+              </span>
+              <span className="md:before:content-['·'] md:before:mr-2">с 2017 года</span>
             </div>
 
             <h1 className="font-cormorant font-light leading-[1.05] mb-3 animate-fade-in-up delay-100 text-white" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)", opacity: 0 }}>
