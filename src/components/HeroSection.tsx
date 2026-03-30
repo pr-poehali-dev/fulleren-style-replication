@@ -9,8 +9,8 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img src={HERO_IMAGE} alt="Hero" className="w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(8,8,20,0.82) 0%, rgba(8,8,20,0.55) 50%, rgba(8,8,20,0.7) 100%)" }} />
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(232,213,176,0.04) 0%, transparent 60%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(8,10,30,0.85) 0%, rgba(8,10,30,0.6) 50%, rgba(8,10,30,0.75) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, hsl(var(--teal) / 0.08) 0%, transparent 60%)" }} />
       </div>
 
       <div className="orbital animate-spin-slow" style={{ width: 700, height: 700, top: "50%", right: "-200px", marginTop: -350 }} />
@@ -19,9 +19,9 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
       <div className="container mx-auto px-6 md:px-12 relative z-10 pt-24">
         <div className="max-w-2xl">
           <div className="mb-6 flex items-center gap-3 animate-fade-in-up" style={{ opacity: 0 }}>
-            <div className="h-px w-8" style={{ background: "linear-gradient(90deg, rgb(232,213,176), transparent)" }} />
-            <span className="font-golos text-xs tracking-[0.2em] uppercase" style={{ color: "rgba(232,213,176,0.6)" }}>
-              Центр поддержки семьи
+            <div className="h-px w-8" style={{ background: "hsl(var(--teal))" }} />
+            <span className="font-golos text-xs tracking-[0.2em] uppercase" style={{ color: "hsl(var(--teal))" }}>
+              Центр квантовой педагогики и психологии
             </span>
           </div>
 
@@ -29,40 +29,30 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             className="font-cormorant font-light leading-[1.05] mb-8 animate-fade-in-up"
             style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)", color: "#fff", opacity: 0, animationDelay: "0.1s" }}
           >
-            Фуллерен —<br />
-            <em className="not-italic" style={{ background: "linear-gradient(135deg, rgb(232,213,176), rgb(201,169,110))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              пространство
-            </em>
-            <br />для роста
+            Раскройте<br />
+            <em className="gradient-text not-italic">потенциал</em>
+            <br />каждого
           </h1>
 
           <p className="font-golos text-base leading-relaxed mb-10 max-w-md animate-fade-in-up"
-            style={{ color: "rgba(255,255,255,0.55)", opacity: 0, animationDelay: "0.2s" }}>
-            Образовательный центр, объединяющий науку, практику и поддержку семьи — для тех, кто стремится к осознанной жизни
+            style={{ color: "rgba(255,255,255,0.6)", opacity: 0, animationDelay: "0.2s" }}>
+            Научно-образовательный центр, объединяющий передовые исследования в области нейронауки, психологии и педагогики для трансформации личности
           </p>
 
           <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <button
               onClick={() => scrollTo("directions")}
-              className="px-8 py-3.5 font-golos text-sm font-medium tracking-wide transition-all duration-300 hover:scale-105"
-              style={{
-                background: "linear-gradient(135deg, rgb(232,213,176), rgb(201,169,110))",
-                color: "rgb(20,15,5)",
-                borderRadius: "2px",
-              }}
+              className="px-8 py-3.5 rounded-full font-golos font-semibold text-sm transition-all duration-300 hover:scale-105"
+              style={{ background: "hsl(var(--teal))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--teal) / 0.4)" }}
             >
-              Наши направления
+              Наши программы
             </button>
             <button
               onClick={() => scrollTo("contacts")}
-              className="px-8 py-3.5 font-golos text-sm font-medium tracking-wide transition-all duration-300 hover:bg-white/10"
-              style={{
-                border: "1px solid rgba(232,213,176,0.3)",
-                color: "rgba(232,213,176,0.85)",
-                borderRadius: "2px",
-              }}
+              className="px-8 py-3.5 rounded-full font-golos font-semibold text-sm transition-all duration-300 hover:bg-white/10"
+              style={{ border: "1.5px solid rgba(255,255,255,0.25)", color: "#fff" }}
             >
-              Записаться
+              Связаться с нами
             </button>
           </div>
 
