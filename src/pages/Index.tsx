@@ -172,10 +172,10 @@ export default function Index() {
           <div className="max-w-xl">
             <div
               className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-xs font-golos font-semibold tracking-widest uppercase animate-fade-in-up"
-              style={{ border: "1.5px solid rgba(100,210,230,0.4)", color: "rgb(130,220,240)", background: "rgba(100,210,230,0.1)" }}
+              style={{ border: "1.5px solid rgba(232,213,176,0.4)", color: "rgb(232,213,176)", background: "rgba(232,213,176,0.08)" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "rgb(130,220,240)" }} />
-              Образовательный центр · с 2012 года
+              <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "rgb(232,213,176)" }} />
+              Центр поддержки семьи · с 2017 года
             </div>
 
             <h1 className="font-cormorant font-light leading-[1.05] mb-3 animate-fade-in-up delay-100 text-white" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)", opacity: 0 }}>
