@@ -178,11 +178,30 @@ export default function Index() {
               Образовательный центр · с 2012 года
             </div>
 
-            <h1 className="font-cormorant font-light leading-[1.05] mb-5 animate-fade-in-up delay-100 text-white" style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)", opacity: 0 }}>
+            <h1 className="font-cormorant font-light leading-[1.05] mb-3 animate-fade-in-up delay-100 text-white" style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)", opacity: 0 }}>
               Центр квантовой<br />
-              педагогики и психологии<br />
-              <em className="not-italic" style={{ background: "linear-gradient(130deg, #7dd8f0, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Фуллерен</em>
+              педагогики и психологии
             </h1>
+
+            <div className="animate-fade-in-up delay-150 mb-5" style={{ opacity: 0 }}>
+              <span
+                className="font-cormorant font-light tracking-[0.18em] uppercase"
+                style={{
+                  fontSize: "clamp(2.6rem, 7vw, 6rem)",
+                  background: "linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  display: "block",
+                  lineHeight: 1.1,
+                  letterSpacing: "0.18em",
+                  textShadow: "none",
+                }}
+              >
+                Фуллерен
+              </span>
+              <div style={{ height: "1.5px", width: "100%", maxWidth: "340px", background: "linear-gradient(90deg, rgba(232,213,176,0.8) 0%, rgba(201,169,110,0.4) 60%, transparent 100%)", marginTop: "6px" }} />
+            </div>
 
             <p className="font-golos text-base md:text-lg max-w-lg mb-10 animate-fade-in-up delay-200 leading-relaxed" style={{ opacity: 0, color: "rgba(255,255,255,0.65)" }}>
               Передовые методы развития личности, основанные на современной нейронауке, психологии и инновационной педагогике.
