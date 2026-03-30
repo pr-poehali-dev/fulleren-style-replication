@@ -514,18 +514,16 @@ export default function Index() {
           <div className="max-w-xl">
 
               <h2 className="font-cormorant text-4xl md:text-5xl font-light mb-6">
-                Свяжитесь<br />с нами
+                Контакты
               </h2>
               <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>
-                Готовы ответить на все вопросы о программах центра.
+                Готовы ответить на все вопросы о направлениях центра.
               </p>
 
               <div className="space-y-4">
                 {[
-                  { icon: "MapPin", label: "Адрес", value: "ул. Творческая, 42, Москва" },
-                  { icon: "Phone", label: "Телефон", value: "+7 (495) 000-00-00" },
-                  { icon: "Mail", label: "Email", value: "info@fullerenclub.ru" },
-                  { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 09:00 – 20:00" },
+                  { icon: "MapPin", label: "Адрес", value: "ул. Комсомольская Набережная, 22, г. Астрахань" },
+                  { icon: "Phone", label: "Телефон", value: "+7 927 072 16 73" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
