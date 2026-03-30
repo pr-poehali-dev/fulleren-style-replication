@@ -448,40 +448,20 @@ export default function Index() {
 
 
       {/* ── CTA BANNER ── */}
-      <section className="relative overflow-hidden" style={{ background: "hsl(var(--section-dark))" }}>
-        <div className="grid md:grid-cols-2 min-h-[420px]">
-          {/* Левая — тёмная с кнопкой */}
-          <div className="relative overflow-hidden flex flex-col items-center justify-center py-20 px-8 md:px-14 text-center">
-            <div className="orbital animate-spin-slow" style={{ width: 500, height: 500, top: "50%", left: "-150px", marginTop: -250 }} />
-            <div className="orbital animate-spin-rev" style={{ width: 300, height: 300, top: "50%", right: "-80px", marginTop: -150 }} />
-            <div className="relative z-10">
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light mb-4 text-white">
-                Раскройте свой<br />потенциал с Фуллерен
-              </h2>
-              <p className="font-golos text-sm mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
-                Запишитесь на бесплатную консультацию — без обязательств
-              </p>
-              <button onClick={() => scrollTo("contacts")}
-                className="px-10 py-4 rounded-full font-golos font-bold text-sm transition-all duration-300 hover:scale-105"
-                style={{ background: "hsl(var(--teal))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--teal) / 0.4)" }}>
-                Получить консультацию
-              </button>
-            </div>
-          </div>
-
-          {/* Правая — белая с цитатой */}
-          <div className="flex flex-col items-center justify-center py-16 px-8 md:px-14 text-center" style={{ background: "#fff" }}>
-            <div className="font-cormorant text-5xl leading-none mb-6" style={{
+      <section className="py-20 md:py-28" style={{ background: "#fff" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="font-cormorant text-6xl leading-none mb-6" style={{
               background: "linear-gradient(130deg, #e8d5b0 0%, #c9a96e 60%, #e8d5b0 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}>"</div>
-            <blockquote className="font-cormorant text-2xl md:text-3xl font-light leading-snug mb-6" style={{ color: "hsl(var(--foreground))" }}>
+            <blockquote className="font-cormorant text-2xl md:text-4xl font-light leading-snug mb-8" style={{ color: "hsl(var(--foreground))" }}>
               Дети нам отражают, что мы родители не хотим учиться у жизни
             </blockquote>
-            <div className="w-10 h-px mb-4 mx-auto" style={{ background: "linear-gradient(90deg, transparent, #c9a96e, transparent)" }} />
-            <p className="font-cormorant italic text-base" style={{ color: "hsl(var(--muted-foreground))" }}>
+            <div className="w-16 h-px mb-6 mx-auto" style={{ background: "linear-gradient(90deg, transparent, #c9a96e, transparent)" }} />
+            <p className="font-cormorant italic text-lg" style={{ color: "hsl(var(--muted-foreground))" }}>
               из интервью Ефремовой Марии Викторовны
             </p>
           </div>
