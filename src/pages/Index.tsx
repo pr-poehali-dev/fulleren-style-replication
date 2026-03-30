@@ -357,7 +357,7 @@ export default function Index() {
               </h2>
             </div>
             <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Закрытые пространства для глубокого общения, практики и профессионального роста
+              Онлайн клубы для женщин, родителей и педагогов, в которых можно найти поддержку сообщества и познакомиться с материалами живых и онлайн встреч
             </p>
           </div>
 
