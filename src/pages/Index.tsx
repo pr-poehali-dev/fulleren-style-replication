@@ -69,8 +69,6 @@ export default function Index() {
     { id: "directions", label: "Курсы" },
     { id: "meetups", label: "Встречи" },
     { id: "clubs", label: "Сообщества" },
-    { id: "about", label: "О Центре" },
-    { id: "founders", label: "Основатели" },
     { id: "contacts", label: "Контакты" },
   ];
 
@@ -446,105 +444,7 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-0" aria-hidden>
-        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
-      </div>
 
-      {/* ── ABOUT ── */}
-      <section id="about" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                <img src={CENTER_IMAGE} alt="О центре" className="w-full h-full object-cover" />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, hsl(var(--section-alt)) 0%, transparent 55%)" }} />
-              </div>
-              <div className="absolute -bottom-5 -right-4 md:-right-8 p-5 rounded-2xl"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))", boxShadow: "0 8px 32px hsl(210 82% 36% / 0.1)" }}>
-                <div className="font-cormorant text-4xl font-light gradient-text">12+</div>
-                <div className="font-golos text-xs mt-1 leading-snug" style={{ color: "hsl(var(--muted-foreground))" }}>лет в квантовой<br />педагогике</div>
-              </div>
-              <div className="absolute -top-5 -left-5 w-20 h-20 rounded-full animate-float"
-                style={{ border: "1.5px solid hsl(var(--teal) / 0.35)", background: "hsl(var(--teal) / 0.05)" }} />
-            </div>
-
-            <div>
-
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight mb-6">
-                Наука о<br />развитии<br /><em className="gradient-text not-italic">человека</em>
-              </h2>
-              <div className="space-y-4 font-golos text-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-                <p>
-                  Центр квантовой педагогики и психологии «Фуллерен» — это научно-образовательное пространство, объединяющее передовые исследования в области нейронауки, психологии и педагогики.
-                </p>
-                <p>
-                  Наш подход основан на принципах квантовой психологии: каждый человек обладает уникальным потенциалом, и наша задача — создать условия для его раскрытия.
-                </p>
-                <p>
-                  За 12 лет работы мы создали экосистему из более 50 авторских программ, которые помогли тысячам людей найти себя, стать лучшими педагогами и психологами.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-5 mt-8">
-                {[
-                  { icon: "FlaskConical", text: "Научно обоснованные методики" },
-                  { icon: "Award", text: "Государственные лицензии и сертификаты" },
-                  { icon: "Users", text: "Группы до 12 человек" },
-                  { icon: "Monitor", text: "Очный и дистанционный форматы" },
-                ].map((item) => (
-                  <div key={item.text} className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: "hsl(var(--blue) / 0.1)" }}>
-                      <Icon name={item.icon} fallback="Check" size={15} style={{ color: "hsl(var(--blue))" }} />
-                    </div>
-                    <span className="font-golos text-xs leading-snug" style={{ color: "hsl(var(--foreground) / 0.8)" }}>{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="flex items-center justify-center py-0" aria-hidden>
-        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
-      </div>
-
-      {/* ── FOUNDERS ── */}
-      <section id="founders" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center mb-14">
-
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light">
-              Основатели<br />Центра
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {FOUNDERS.map((founder, i) => (
-              <div key={founder.name} className="card-hover group rounded-3xl overflow-hidden"
-                style={{ background: "#fff", border: "1.5px solid hsl(var(--border))" }}>
-                <div className="overflow-hidden relative" style={{ aspectRatio: "4/3" }}>
-                  <img src={founder.image} alt={founder.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ objectPosition: founder.objectPosition }} />
-                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 55%)" }} />
-
-                </div>
-                <div className="p-6">
-                  <h3 className="font-cormorant text-2xl font-semibold mb-1">{founder.name}</h3>
-                  <p className="font-golos text-xs font-semibold tracking-wide mb-3" style={{ color: "hsl(var(--teal))" }}>{founder.role}</p>
-                  <p className="font-golos text-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>{founder.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="flex items-center justify-center py-0" aria-hidden>
-        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
-      </div>
 
       {/* ── CTA BANNER ── */}
       <section className="py-20 relative overflow-hidden" style={{ background: "hsl(var(--section-dark))" }}>
