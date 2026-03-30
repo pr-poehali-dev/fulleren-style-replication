@@ -258,18 +258,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <div className="py-3.5 overflow-hidden" style={{ background: "hsl(var(--blue))" }}>
-        <div className="marquee-inner">
-          {Array.from({ length: 4 }).flatMap((_, bi) =>
-            ["Квантовая психология", "Педагогика", "Арт-терапия", "Нейронаука", "Коучинг", "Семейные практики", "Саморазвитие"].map((t, ti) => (
-              <span key={`${bi}-${ti}`} className="font-golos text-sm font-medium mx-7 whitespace-nowrap" style={{ color: "rgba(255,255,255,0.85)" }}>
-                {t} ·
-              </span>
-            ))
-          )}
-        </div>
-      </div>
+
 
       {/* ── MEETUPS ── */}
       <section className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
