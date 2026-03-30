@@ -478,9 +478,6 @@ export default function Index() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <p className="font-cormorant font-light mb-2" style={{ fontSize: "clamp(1rem, 2vw, 1.3rem)", color: "hsl(var(--muted-foreground))" }}>
-              интервью про
-            </p>
             <h2 className="font-cormorant font-light leading-tight mb-6" style={{
               fontSize: "clamp(2rem, 5vw, 3.5rem)",
               background: "linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%)",
@@ -488,7 +485,7 @@ export default function Index() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}>
-              семейное образование
+              интервью про
             </h2>
             <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>
               семейное образование, гуманную педагогику, свободу ребёнка и взращивание ответственности, авторитеты и их принятие, идеалы, открытость, подростков, важность родителя в образовании ребёнка, поддержку родителей, искренность, страхи детей, справедливость, ответственность учителя, страхи ошибок, внимание детей, благодарность, учителей, партнёрство, государственную аттестацию, вдохновение, — воспитание в многодетной семье, онлайн-образование.
