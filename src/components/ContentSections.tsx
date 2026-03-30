@@ -60,15 +60,53 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
       {/* ── MEETUPS ── */}
       <section id="meetups" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-            <div>
+          <div className="mb-14">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
                 Встречи
               </h2>
+              {/* Форматы */}
+              <div className="flex items-center gap-3">
+                <span className="font-golos text-xs tracking-[0.12em] uppercase px-3 py-1.5 rounded-full"
+                  style={{ border: "1px solid hsl(var(--border))", color: "hsl(var(--muted-foreground))" }}>
+                  Онлайн
+                </span>
+                <span className="font-golos text-xs tracking-[0.12em] uppercase px-3 py-1.5 rounded-full"
+                  style={{ border: "1px solid hsl(var(--border))", color: "hsl(var(--muted-foreground))" }}>
+                  Офлайн
+                </span>
+              </div>
             </div>
-            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Регулярные очные и онлайн-форматы для развития, общения и обмена знаниями
-            </p>
+
+            {/* Три направления */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              {[
+                {
+                  label: "для родителей",
+                  text: "Каждую неделю организуются живые встречи с родителями по темам воспитания и образования — с возможностью познакомиться с нами ближе, в формате живых дискуссий.",
+                },
+                {
+                  label: "для женщин",
+                  text: "Проводим тематические встречи для женщин и организуем встречи с приездом спикеров из других регионов по разным направлениям.",
+                },
+                {
+                  label: "для педагогов",
+                  text: "Встречи для педагогов проходят в формате онлайн и офлайн. С анонсом всех встреч на ближайшее время вы можете познакомиться в этом разделе.",
+                },
+              ].map((item) => (
+                <div key={item.label} className="flex gap-4">
+                  <div className="w-px flex-shrink-0 mt-1" style={{ background: "linear-gradient(to bottom, hsl(var(--teal)), transparent)", minHeight: 60 }} />
+                  <div>
+                    <div className="font-golos text-xs font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: "hsl(var(--teal))" }}>
+                      {item.label}
+                    </div>
+                    <p className="font-golos text-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
