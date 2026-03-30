@@ -219,11 +219,11 @@ export default function Index() {
 
             <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300" style={{ opacity: 0 }}>
               <button
-                onClick={() => scrollTo("about")}
+                onClick={() => scrollTo("interview")}
                 className="px-8 py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300"
                 style={{ border: "1.5px solid rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.75)", backdropFilter: "blur(8px)" }}
               >
-                О центре
+                Интервью основателя
               </button>
             </div>
 
