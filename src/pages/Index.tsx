@@ -69,6 +69,7 @@ export default function Index() {
     { id: "directions", label: "Курсы" },
     { id: "meetups", label: "Встречи" },
     { id: "clubs", label: "Сообщества" },
+    { id: "interview", label: "Интервью" },
     { id: "contacts", label: "Контакты" },
   ];
 
@@ -467,12 +468,9 @@ export default function Index() {
       </section>
 
       {/* ── INTERVIEW ── */}
-      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
+      <section id="interview" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight mb-10">
-              Интервью
-            </h2>
             <div className="rounded-2xl overflow-hidden mb-8 shadow-lg">
               <img
                 src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/ad5ab410-5e65-414f-ab8b-f02e02152a96.jpg"
@@ -480,15 +478,27 @@ export default function Index() {
                 className="w-full h-auto object-cover"
               />
             </div>
+            <p className="font-cormorant font-light mb-2" style={{ fontSize: "clamp(1rem, 2vw, 1.3rem)", color: "hsl(var(--muted-foreground))" }}>
+              интервью про
+            </p>
+            <h2 className="font-cormorant font-light leading-tight mb-6" style={{
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              background: "linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}>
+              семейное образование
+            </h2>
             <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Интервью про семейное образование, гуманную педагогику, свободу ребёнка и взращивание ответственности, авторитеты и их принятие, идеалы, открытость, подростков, важность родителя в образовании ребёнка, поддержку родителей, искренность, страхи детей, справедливость, ответственность учителя, страхи ошибок, внимание детей, благодарность, учителей, партнёрство, государственную аттестацию, вдохновение, воспитание в многодетной семье, онлайн-образование.
+              семейное образование, гуманную педагогику, свободу ребёнка и взращивание ответственности, авторитеты и их принятие, идеалы, открытость, подростков, важность родителя в образовании ребёнка, поддержку родителей, искренность, страхи детей, справедливость, ответственность учителя, страхи ошибок, внимание детей, благодарность, учителей, партнёрство, государственную аттестацию, вдохновение, — воспитание в многодетной семье, онлайн-образование.
             </p>
             <a
               href="https://dzen.ru/video/watch/69bafc4bba64830c7bf6d8db?share_to=link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-10 py-4 rounded-full font-golos font-bold text-sm transition-all duration-300 hover:scale-105"
-              style={{ background: "hsl(var(--teal))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--teal) / 0.4)" }}
+              style={{ background: "linear-gradient(130deg, #8B5E3C 0%, #c9a96e 50%, #8B5E3C 100%)", color: "#fff", boxShadow: "0 4px 24px rgba(201,169,110,0.4)" }}
             >
               Смотреть на Дзен
             </a>
