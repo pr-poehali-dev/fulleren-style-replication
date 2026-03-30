@@ -23,7 +23,7 @@ const CLUBS = [
 ];
 
 const MEETUPS = [
-  { icon: "Mic", title: "Открытые лекции", desc: "Бесплатные публичные лекции от ведущих специалистов центра и приглашённых экспертов — каждый второй вторник месяца.", date: "Каждые 2 недели", format: "Онлайн / Очно", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/72fd8e60-d0ef-47fd-9d56-a1368875f9f0.jpg" },
+  { icon: "Mic", title: "СДВГ, РАС и другие неврологические расстройства ребёнка: психика, мозг, тело.", desc: "Приглашаем родителей на встречи со специалистами квантовой психологии, нейропсихологии, микробиологии, которые рассмотрят проблему неврологического расстройства ребёнка с трёх сторон: психика, мозг, тело.", date: "10 и 17 апреля в 18:00", format: "живая встреча", url: "https://www.fullerenclub.ru/vstrechadetiovz.html", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/72fd8e60-d0ef-47fd-9d56-a1368875f9f0.jpg" },
   { icon: "MessageCircle", title: "Супервизионные группы", desc: "Профессиональные встречи для педагогов и психологов: разбор сложных случаев, обмен методиками, поддержка коллег.", date: "Еженедельно", format: "Очно", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/5b571cfc-8d26-4054-923e-01b51e09be56.png" },
   { icon: "Sunrise", title: "Утренние практики", desc: "Еженедельные сессии по квантовым медитациям и телесным практикам в малых группах. Идеально для начала недели.", date: "По понедельникам", format: "Очно / Онлайн", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/bb53d7fe-1679-482b-8b1e-625eccaf437e.png" },
   { icon: "Globe", title: "Международный форум", desc: "Ежегодный форум центра с участием зарубежных специалистов в области нейронауки, квантовой психологии и педагогики.", date: "1 раз в год", format: "Очно", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/eab79b53-e3b9-4283-84b9-ef1c2da76180.png" },
@@ -331,6 +331,18 @@ export default function Index() {
                       <Icon name="MapPin" size={11} style={{ color: "rgba(255,255,255,0.5)" }} />
                       <span className="font-golos text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>{meetup.format}</span>
                     </div>
+                    {meetup.url && (
+                      <a
+                        href={meetup.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 mt-2 font-golos text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-300 hover:opacity-80"
+                        style={{ background: "linear-gradient(130deg, #c9a96e, #e8d5b0)", color: "#1a1a1a" }}
+                      >
+                        Подробнее
+                        <Icon name="ArrowRight" size={11} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
