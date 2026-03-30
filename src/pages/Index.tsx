@@ -258,14 +258,16 @@ export default function Index() {
         </div>
       </section>
 
-
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
 
       {/* ── MEETUPS ── */}
       <section className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-              <p className="section-label mb-3">Мероприятия</p>
+
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
                 Встречи
               </h2>
@@ -315,12 +317,16 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── CLUBS ── */}
       <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-              <p className="section-label mb-3">Сообщество</p>
+
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
                 Клубы и<br />сообщества
               </h2>
@@ -364,12 +370,16 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── DIRECTIONS ── */}
       <section id="directions" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-              <p className="section-label mb-3">Направления</p>
+
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
                 Наши<br />направления
               </h2>
@@ -413,6 +423,10 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── ABOUT ── */}
       <section id="about" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
         <div className="container mx-auto px-6 md:px-12">
@@ -432,7 +446,7 @@ export default function Index() {
             </div>
 
             <div>
-              <p className="section-label mb-4">О нас</p>
+
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight mb-6">
                 Наука о<br />развитии<br /><em className="gradient-text not-italic">человека</em>
               </h2>
@@ -469,11 +483,15 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── FOUNDERS ── */}
       <section id="founders" className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-14">
-            <p className="section-label mb-3">Команда</p>
+
             <h2 className="font-cormorant text-4xl md:text-5xl font-light">
               Основатели<br />Центра
             </h2>
@@ -501,12 +519,16 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── CTA BANNER ── */}
       <section className="py-20 relative overflow-hidden" style={{ background: "hsl(var(--section-dark))" }}>
         <div className="orbital animate-spin-slow" style={{ width: 500, height: 500, top: "50%", left: "-150px", marginTop: -250 }} />
         <div className="orbital animate-spin-rev" style={{ width: 300, height: 300, top: "50%", right: "-80px", marginTop: -150 }} />
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
-          <p className="section-label mb-4" style={{ color: "hsl(var(--teal-light))" }}>Начните сегодня</p>
+
           <h2 className="font-cormorant text-4xl md:text-6xl font-light mb-4 text-white">
             Раскройте свой<br />потенциал с Фуллерен
           </h2>
@@ -521,11 +543,15 @@ export default function Index() {
         </div>
       </section>
 
+      <div className="flex items-center justify-center py-0" aria-hidden>
+        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
+      </div>
+
       {/* ── CONTACTS ── */}
       <section id="contacts" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-xl">
-              <p className="section-label mb-4">Контакты</p>
+
               <h2 className="font-cormorant text-4xl md:text-5xl font-light mb-6">
                 Свяжитесь<br />с нами
               </h2>
