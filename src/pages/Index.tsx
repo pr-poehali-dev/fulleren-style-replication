@@ -466,6 +466,36 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ── INTERVIEW ── */}
+      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight mb-10">
+              Интервью
+            </h2>
+            <div className="rounded-2xl overflow-hidden mb-8 shadow-lg">
+              <img
+                src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/ad5ab410-5e65-414f-ab8b-f02e02152a96.jpg"
+                alt="Как не потерять ребёнка в погоне за оценками"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>
+              Интервью про семейное образование, гуманную педагогику, свободу ребёнка и взращивание ответственности, авторитеты и их принятие, идеалы, открытость, подростков, важность родителя в образовании ребёнка, поддержку родителей, искренность, страхи детей, справедливость, ответственность учителя, страхи ошибок, внимание детей, благодарность, учителей, партнёрство, государственную аттестацию, вдохновение, воспитание в многодетной семье, онлайн-образование.
+            </p>
+            <a
+              href="https://dzen.ru/video/watch/69bafc4bba64830c7bf6d8db?share_to=link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-4 rounded-full font-golos font-bold text-sm transition-all duration-300 hover:scale-105"
+              style={{ background: "hsl(var(--teal))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--teal) / 0.4)" }}
+            >
+              Смотреть на Дзен
+            </a>
+          </div>
+        </div>
+      </section>
+
       <div className="flex items-center justify-center py-0" aria-hidden>
         <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
       </div>
