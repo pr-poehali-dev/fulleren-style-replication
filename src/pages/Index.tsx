@@ -410,7 +410,7 @@ export default function Index() {
               </h2>
             </div>
             <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Шесть специализированных направлений, разработанных командой учёных и практиков
+              Раздел, где вы сможете познакомиться с офлайн и онлайн курсами для детей разных возрастов, а также для родителей, женщин, педагогов, психологов
             </p>
           </div>
 
