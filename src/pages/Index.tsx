@@ -226,13 +226,29 @@ export default function Index() {
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-10 mt-14 pt-8 animate-fade-in-up delay-400" style={{ opacity: 0, borderTop: "1px solid rgba(255,255,255,0.15)" }}>
-              {[["1000+", "Выпускников"], ["50+", "Программ"], ["25+", "Специалистов"], ["12", "Лет опыта"]].map(([num, label]) => (
-                <div key={label}>
-                  <div className="font-cormorant text-3xl md:text-4xl font-light" style={{ color: "#7dd8f0" }}>{num}</div>
-                  <div className="font-golos text-xs mt-0.5 tracking-wide" style={{ color: "rgba(255,255,255,0.55)" }}>{label}</div>
-                </div>
-              ))}
+            <div className="mt-14 pt-8 animate-fade-in-up delay-400" style={{ opacity: 0, borderTop: "1px solid rgba(232,213,176,0.15)" }}>
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-px" style={{ background: "rgba(232,213,176,0.08)", borderRadius: "2px" }}>
+                {[
+                  ["500+", "Родительских встреч"],
+                  ["25+", "Выступлений"],
+                  ["15+", "Мероприятий"],
+                  ["14+", "Направлений"],
+                  ["9+", "Лет опыта"],
+                  ["3+", "Сообществ"],
+                ].map(([num, label]) => (
+                  <div key={label} className="flex flex-col items-center justify-center text-center px-4 py-5 transition-all duration-300 hover:bg-white/5"
+                    style={{ background: "rgba(10,10,14,0.4)" }}>
+                    <div className="font-cormorant text-2xl md:text-3xl font-light leading-none mb-1.5"
+                      style={{ background: "linear-gradient(135deg, rgb(232,213,176), rgb(201,169,110))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                      {num}
+                    </div>
+                    <div className="font-golos text-[10px] tracking-[0.1em] uppercase leading-tight"
+                      style={{ color: "rgba(255,255,255,0.45)" }}>
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
