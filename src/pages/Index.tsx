@@ -35,7 +35,7 @@ const FOUNDERS = [
     name: "Анна Воронова",
     role: "Основатель и научный директор",
     bio: "Доктор психологических наук, практикующий психолог с 20-летним стажем. Создала Центр в 2012 году, объединив передовые научные исследования и практики квантовой психологии.",
-    image: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/b21103cd-9d60-41db-8c7e-ef414e06267a.png",
+    image: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/0122ed04-c706-45ed-999b-d0bedb96e715.png",
   },
   {
     name: "Михаил Соколов",
@@ -460,10 +460,7 @@ export default function Index() {
                   <img src={founder.image} alt={founder.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 55%)" }} />
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center font-cormorant text-lg font-semibold"
-                    style={{ background: "hsl(var(--blue))", color: "#fff" }}>
-                    0{i + 1}
-                  </div>
+
                 </div>
                 <div className="p-6">
                   <h3 className="font-cormorant text-2xl font-semibold mb-1">{founder.name}</h3>
