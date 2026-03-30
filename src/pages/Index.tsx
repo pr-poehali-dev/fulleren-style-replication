@@ -351,12 +351,11 @@ export default function Index() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Клубы и<br />сообщества
+                Клубы и сообщества
               </h2>
             </div>
-            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+            <p className="font-golos text-sm md:max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
               Онлайн клубы для женщин, родителей и педагогов, в которых можно найти поддержку сообщества и познакомиться с материалами живых и онлайн встреч
             </p>
           </div>
@@ -404,12 +403,11 @@ export default function Index() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-
               <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Наши<br />курсы
+                Наши курсы
               </h2>
             </div>
-            <p className="font-golos text-sm max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
+            <p className="font-golos text-sm md:max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
               Раздел, где вы сможете познакомиться с офлайн и онлайн курсами для детей разных возрастов, а также для родителей, женщин, педагогов, психологов
             </p>
           </div>
