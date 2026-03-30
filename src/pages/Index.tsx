@@ -67,6 +67,8 @@ export default function Index() {
   const navItems = [
     { id: "home", label: "Главная" },
     { id: "directions", label: "Направления" },
+    { id: "meetups", label: "Встречи" },
+    { id: "clubs", label: "Сообщества" },
     { id: "about", label: "О Центре" },
     { id: "founders", label: "Основатели" },
     { id: "contacts", label: "Контакты" },
@@ -125,14 +127,6 @@ export default function Index() {
           ))}
         </ul>
 
-        <button
-          onClick={() => scrollTo("contacts")}
-          className="hidden md:block px-5 py-2 rounded-full text-sm font-semibold font-golos transition-all duration-300 hover:scale-105 animate-pulse-blue"
-          style={{ background: "hsl(var(--blue))", color: "#fff" }}
-        >
-          Записаться
-        </button>
-
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} style={{ color: "hsl(var(--foreground))" }}>
           <Icon name={menuOpen ? "X" : "Menu"} size={24} />
         </button>
@@ -148,10 +142,6 @@ export default function Index() {
               {item.label}
             </button>
           ))}
-          <button onClick={() => scrollTo("contacts")} className="mt-8 px-6 py-3 rounded-full font-golos font-semibold text-base"
-            style={{ background: "hsl(var(--blue))", color: "#fff" }}>
-            Записаться на курс
-          </button>
         </div>
       )}
 
@@ -208,13 +198,6 @@ export default function Index() {
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300" style={{ opacity: 0 }}>
-              <button
-                onClick={() => scrollTo("directions")}
-                className="px-8 py-3.5 rounded-full font-golos font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                style={{ background: "hsl(var(--blue))", color: "#fff", boxShadow: "0 4px 24px hsl(var(--blue) / 0.5)" }}
-              >
-                Наши курсы
-              </button>
               <button
                 onClick={() => scrollTo("about")}
                 className="px-8 py-3.5 rounded-full font-golos font-medium text-sm transition-all duration-300"
@@ -518,14 +501,13 @@ export default function Index() {
       {/* ── CONTACTS ── */}
       <section id="contacts" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-            <div>
+          <div className="max-w-xl">
               <p className="section-label mb-4">Контакты</p>
               <h2 className="font-cormorant text-4xl md:text-5xl font-light mb-6">
                 Свяжитесь<br />с нами
               </h2>
               <p className="font-golos text-sm leading-relaxed mb-8" style={{ color: "hsl(var(--muted-foreground))" }}>
-                Готовы ответить на все вопросы о программах и записи. Первая консультация — бесплатно.
+                Готовы ответить на все вопросы о программах центра.
               </p>
 
               <div className="space-y-4">
@@ -547,42 +529,6 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Form */}
-            <div className="p-8 rounded-3xl" style={{ background: "#fff", border: "1.5px solid hsl(var(--border))", boxShadow: "0 8px 40px hsl(210 82% 36% / 0.07)" }}>
-              <h3 className="font-cormorant text-2xl font-semibold mb-6">Записаться на курс</h3>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                {[
-                  { label: "Ваше имя", type: "text", placeholder: "Имя Фамилия" },
-                  { label: "Телефон", type: "tel", placeholder: "+7 (___) ___-__-__" },
-                ].map((field) => (
-                  <div key={field.label}>
-                    <label className="font-golos text-xs mb-1.5 block font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>{field.label}</label>
-                    <input type={field.type} placeholder={field.placeholder}
-                      className="w-full px-4 py-3 rounded-xl text-sm font-golos outline-none transition-all duration-200 focus:ring-2"
-                      style={{ background: "hsl(var(--section-alt))", border: "1.5px solid hsl(var(--border))", color: "hsl(var(--foreground))" }} />
-                  </div>
-                ))}
-                <div>
-                  <label className="font-golos text-xs mb-1.5 block font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>Направление</label>
-                  <select className="w-full px-4 py-3 rounded-xl text-sm font-golos outline-none appearance-none"
-                    style={{ background: "hsl(var(--section-alt))", border: "1.5px solid hsl(var(--border))", color: "hsl(var(--foreground))" }}>
-                    <option value="">Выберите направление</option>
-                    {DIRECTIONS.map((d) => <option key={d.title}>{d.title}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label className="font-golos text-xs mb-1.5 block font-medium" style={{ color: "hsl(var(--muted-foreground))" }}>Сообщение (необязательно)</label>
-                  <textarea placeholder="Ваш вопрос или пожелание..." rows={3} className="w-full px-4 py-3 rounded-xl text-sm font-golos outline-none resize-none"
-                    style={{ background: "hsl(var(--section-alt))", border: "1.5px solid hsl(var(--border))", color: "hsl(var(--foreground))" }} />
-                </div>
-                <button type="submit" className="w-full py-3.5 rounded-xl font-golos font-semibold text-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
-                  style={{ background: "hsl(var(--blue))", color: "#fff", boxShadow: "0 4px 16px hsl(var(--blue) / 0.25)" }}>
-                  Отправить заявку
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </section>
