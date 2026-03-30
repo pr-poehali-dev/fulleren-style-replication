@@ -66,9 +66,7 @@ export default function Index() {
 
   const navItems = [
     { id: "home", label: "Главная" },
-    { id: "directions", label: "Курсы" },
     { id: "meetups", label: "Встречи" },
-    { id: "clubs", label: "Сообщества" },
     { id: "interview", label: "Интервью" },
     { id: "contacts", label: "Контакты" },
   ];
@@ -341,64 +339,8 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="flex items-center justify-center py-0" aria-hidden>
-        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
-      </div>
-
-      {/* ── CLUBS ── */}
-      <section className="py-24 md:py-32" style={{ background: "hsl(var(--background))" }}>
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-            <div>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light leading-tight">
-                Клубы и сообщества
-              </h2>
-            </div>
-            <p className="font-golos text-sm md:max-w-sm leading-relaxed" style={{ color: "hsl(var(--muted-foreground))" }}>
-              Онлайн клубы для женщин, родителей и педагогов, в которых можно найти поддержку сообщества и познакомиться с материалами живых и онлайн встреч
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {CLUBS.map((club) => (
-              <div
-                key={club.title}
-                className="card-hover group p-7 rounded-2xl relative overflow-hidden flex flex-col"
-                style={{ border: "1.5px solid rgba(255,255,255,0.1)", minHeight: 260 }}
-              >
-                <div
-                  className="absolute inset-0 z-0"
-                  style={{
-                    backgroundImage: `url(${club.bg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <div className="absolute inset-0 z-0" style={{ background: "rgba(0,0,0,0.72)" }} />
-                <div className="relative z-10 flex flex-col flex-1">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                    style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(6px)" }}>
-                    <Icon name={club.icon} fallback="Users" size={22} style={{ color: "#fff" }} />
-                  </div>
-                  <h3 className="font-cormorant text-xl font-semibold mb-2" style={{ color: "#fff" }}>{club.title}</h3>
-                  <p className="font-golos text-sm leading-relaxed mb-4 flex-1" style={{ color: "rgba(255,255,255,0.65)" }}>{club.desc}</p>
-                  <div className="flex items-center gap-1.5 mt-auto">
-                    <Icon name="Users" size={12} style={{ color: "rgba(255,255,255,0.5)" }} />
-                    <span className="font-golos text-xs font-semibold" style={{ color: "rgba(255,255,255,0.5)" }}>{club.members} участников</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="flex items-center justify-center py-0" aria-hidden>
-        <div className="h-px w-full max-w-5xl mx-12" style={{ background: "linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent)" }} />
-      </div>
-
-      {/* ── DIRECTIONS ── */}
-      <section id="directions" className="py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
+      {/* ── DIRECTIONS ── (hidden) */}
+      <section id="directions" className="hidden py-24 md:py-32" style={{ background: "hsl(var(--section-alt))" }}>
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>

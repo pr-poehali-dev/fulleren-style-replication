@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 
 const NAV_ITEMS = [
   { id: "home", label: "Главная" },
-  { id: "directions", label: "Направления" },
+  { id: "meetups", label: "Встречи" },
   { id: "interview", label: "Интервью" },
   { id: "contacts", label: "Контакты" },
 ];
