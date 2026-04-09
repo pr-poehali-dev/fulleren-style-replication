@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Подготовка к школе — Центр Фуллерен, Астрахань</title>
+  <meta name="description" content="Подготовка детей к школе в центре квантовой педагогики и психологии Фуллерен. Программа Жохова, развитие навыков, Астрахань."/>
+  <link rel="icon" type="image/png" href="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/69f610df-48b4-4dd5-9327-fd9f8cd5b714.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Golos+Text:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f4f6f9;
+      --fg: #131c2e;
+      --muted: #6b7a96;
+      --border: #d4dbe8;
+      --section-alt: #edf0f5;
+      --teal: #1ba3a3;
+      --blue: #1a5fb4;
+      --gold1: #e8d5b0;
+      --gold2: #c9a96e;
+      --gold3: #f5e6cc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Golos Text", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: "Cormorant", serif; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    @media (min-width: 768px) { .container { padding: 0 48px; } }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(10,10,14,0.55);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(232,213,176,0.06);
+      transition: all 0.5s ease;
+    }
+    nav.scrolled {
+      padding: 10px 40px;
+      background: rgba(10,10,14,0.96);
+      border-bottom: 1px solid rgba(232,213,176,0.12);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo svg { width: 28px; height: 28px; opacity: 0.8; }
+    .nav-logo-name {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgb(232,213,176);
+      display: block;
+    }
+    .nav-logo-sub {
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(232,213,176,0.45);
+      display: block;
+    }
+    .nav-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Golos Text", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-back:hover { color: rgb(232,213,176); }
+    .nav-back svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(8,15,35,0.88) 0%, rgba(8,15,35,0.72) 55%, rgba(8,15,35,0.45) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 10;
+      max-width: 640px;
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1.5px solid rgba(232,213,176,0.4);
+      color: rgb(232,213,176);
+      background: rgba(232,213,176,0.08);
+      animation: fadeInUp 0.7s ease forwards;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: rgb(232,213,176); display: inline-block; }
+    .hero-label {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      animation: fadeInUp 0.7s 0.05s ease forwards;
+      opacity: 0;
+    }
+    .hero-h1 {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 10px;
+      animation: fadeInUp 0.7s 0.1s ease forwards;
+      opacity: 0;
+    }
+    .hero-brand {
+      display: block;
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      background: linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+      animation: fadeInUp 0.7s 0.15s ease forwards;
+      opacity: 0;
+    }
+    .hero-line {
+      height: 1.5px;
+      max-width: 380px;
+      background: linear-gradient(90deg, rgba(232,213,176,0.8) 0%, rgba(201,169,110,0.4) 60%, transparent 100%);
+      margin-bottom: 24px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.7s 0.2s ease forwards;
+      opacity: 0;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      animation: fadeInUp 0.7s 0.3s ease forwards;
+      opacity: 0;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      background: linear-gradient(130deg, #8B5E3C 0%, #c9a96e 50%, #8B5E3C 100%);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(201,169,110,0.35);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: scale(1.04); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.75);
+      backdrop-filter: blur(8px);
+      background: transparent;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.5); }
+
+    /* ── DIVIDER ── */
+    .divider { display: flex; align-items: center; justify-content: center; }
+    .divider-line {
+      height: 1px; width: 100%; max-width: 900px; margin: 0 48px;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent);
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 80px 0; }
+    @media (min-width: 768px) { .section { padding: 112px 0; } }
+    .section-alt { background: var(--section-alt); }
+    .section-white { background: #fff; }
+    .section-dark { background: rgb(10,10,14); }
+    .section-bg { background: var(--bg); }
+
+    .section-tag {
+      font-family: "Golos Text", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section-h2 {
+      font-family: "Cormorant", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-h2-gold {
+      background: linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-desc {
+      font-family: "Golos Text", sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    /* ── DIRECTIONS / SKILL CARDS ── */
+    .skills-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 640px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .skills-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .skill-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px;
+      border-radius: 16px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,169,110,0.4);
+      box-shadow: 0 12px 40px rgba(201,169,110,0.12);
+    }
+    .skill-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(232,213,176,0.15), rgba(201,169,110,0.08));
+      border: 1px solid rgba(201,169,110,0.2);
+    }
+    .skill-icon svg { width: 20px; height: 20px; fill: none; stroke: var(--gold2); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .skill-title {
+      font-family: "Cormorant", serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: var(--fg);
+    }
+    .skill-desc {
+      font-family: "Golos Text", sans-serif;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* ── IMAGE + TEXT SPLIT ── */
+    .split { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    @media (min-width: 768px) { .split { grid-template-columns: 1fr 1fr; gap: 64px; } }
+    .split.reverse { }
+    @media (min-width: 768px) { .split.reverse .split-img { order: 2; } .split.reverse .split-text { order: 1; } }
+    .split-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 56px rgba(0,0,0,0.13); }
+    .split-img img { width: 100%; height: auto; display: block; }
+    .split-text .lead {
+      font-family: "Golos Text", sans-serif;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .split-text .accent-line {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 16px;
+    }
+    .accent-line-bar {
+      width: 3px; min-height: 40px;
+      border-radius: 2px;
+      background: linear-gradient(to bottom, var(--gold2), rgba(201,169,110,0.2));
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .accent-line-text {
+      font-family: "Golos Text", sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--fg);
+    }
+
+    /* ── ZHOKHOV BLOCK ── */
+    .zhokhov-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .zhokhov-wrap { grid-template-columns: 1fr 1fr; gap: 64px; } }
+    .zhokhov-img { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 56px rgba(0,0,0,0.2); }
+    .zhokhov-img img { width: 100%; height: auto; display: block; }
+    .zhokhov-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(201,169,110,0.12);
+      border: 1px solid rgba(201,169,110,0.35);
+      color: var(--gold2);
+      margin-bottom: 20px;
+    }
+    .zhokhov-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); }
+
+    /* ── RASPISANIE IMAGE ── */
+    .raspisanie-img {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 56px rgba(0,0,0,0.13);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .raspisanie-img img { width: 100%; height: auto; display: block; }
+
+    /* ── FAMILY BLOCK (dark) ── */
+    .family-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .family-inner { grid-template-columns: 1fr 1fr; gap: 64px; } }
+    .family-img { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.4); }
+    .family-img img { width: 100%; height: auto; display: block; }
+    .family-text .section-h2 { color: rgb(232,213,176); }
+    .family-text .lead { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+    .family-concept {
+      font-family: "Cormorant", serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(232,213,176,0.85);
+      border-left: 2px solid rgba(232,213,176,0.3);
+      padding-left: 20px;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    /* ── VIDEO BLOCK ── */
+    .video-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .video-thumb {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 56px rgba(0,0,0,0.2);
+      margin-bottom: 32px;
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+    }
+    .video-thumb img { width: 100%; height: auto; display: block; }
+    .video-thumb-overlay {
+      position: absolute; inset: 0;
+      background: rgba(8,15,35,0.45);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s;
+    }
+    .video-thumb:hover .video-thumb-overlay { background: rgba(8,15,35,0.25); }
+    .play-btn {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(232,213,176,0.15);
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(232,213,176,0.5);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .video-thumb:hover .play-btn { transform: scale(1.1); background: rgba(232,213,176,0.25); }
+    .play-btn svg { width: 28px; height: 28px; fill: rgb(232,213,176); margin-left: 4px; }
+
+    /* ── CTA ── */
+    .cta-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-quote-mark {
+      font-family: "Cormorant", serif;
+      font-size: 72px;
+      line-height: 1;
+      margin-bottom: 16px;
+      background: linear-gradient(130deg, #e8d5b0 0%, #c9a96e 60%, #e8d5b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .cta-quote {
+      font-family: "Cormorant", serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--fg);
+      margin-bottom: 12px;
+    }
+    .cta-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+    .cta-divider { width: 64px; height: 1px; margin: 24px auto; background: linear-gradient(90deg, transparent, #c9a96e, transparent); }
+
+    /* ── CONTACTS ── */
+    .contacts-inner { max-width: 540px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+    .contact-icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      background: rgba(26,95,180,0.1);
+    }
+    .contact-icon svg { width: 16px; height: 16px; fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-label { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+    .contact-value { font-size: 14px; font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer { background: rgb(8,8,12); }
+    .footer-top-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(232,213,176,0.4), rgba(201,169,110,0.6), rgba(232,213,176,0.4), transparent); }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-brand svg { width: 28px; height: 28px; opacity: 0.8; }
+    .footer-name { font-family: "Cormorant", serif; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; font-size: 14px; color: rgb(232,213,176); display: block; }
+    .footer-sub { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232,213,176,0.45); display: block; }
+    .footer-body { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.35); }
+    .footer-col-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232,213,176,0.45); margin-bottom: 12px; }
+    .footer-doc { display: flex; align-items: flex-start; gap: 8px; }
+    .footer-doc-line { width: 1px; height: 40px; margin-top: 2px; flex-shrink: 0; background: rgba(232,213,176,0.2); }
+    .footer-doc-text { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer-doc-num { font-size: 12px; font-weight: 500; color: rgba(232,213,176,0.7); margin-top: 4px; }
+    .footer-social a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+    .footer-social a:hover { color: rgb(232,213,176); }
+    .footer-sline { width: 1px; height: 12px; background: rgba(232,213,176,0.4); transition: height 0.3s; }
+    .footer-social a:hover .footer-sline { height: 20px; }
+    .footer-divider { height: 1px; background: rgba(232,213,176,0.07); margin-bottom: 24px; }
+    .footer-bottom { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="https://www.fullerenclub.ru/" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="6" stroke="rgb(232,213,176)" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+      <circle cx="16" cy="5" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="16" cy="27" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="5" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="27" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <line x1="16" y1="10" x2="16" y2="5" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="16" y1="22" x2="16" y2="27" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="10" y1="16" x2="5" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="22" y1="16" x2="27" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+    </svg>
+    <div>
+      <span class="nav-logo-name">Фуллерен</span>
+      <span class="nav-logo-sub">Центр поддержки семьи</span>
+    </div>
+  </a>
+  <a href="https://www.fullerenclub.ru/" class="nav-back">
+    <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    Сайт Центра
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://www.fullerenclub.ru/images/podgotovka.png" alt="Подготовка к школе"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Центр поддержки семьи · Астрахань
+      </div>
+      <div class="hero-label">В нашем центре</div>
+      <h1 class="hero-h1">Подготовка<br/>к школе</h1>
+      <span class="hero-brand">Фуллерен</span>
+      <div class="hero-line"></div>
+      <p class="hero-desc">Что нужно, чтобы ребёнок был не просто готов к обучению, а чтобы его навыки помогли ему реализоваться и раскрыть свой потенциал?</p>
+      <div class="hero-btns">
+        <a href="https://max.ru/u/f9LHodD" target="_blank" rel="noopener noreferrer" class="btn-primary">Записаться</a>
+        <a href="https://dzen.ru/video/watch/69d6026369103b5d20e6c250" target="_blank" rel="noopener noreferrer" class="btn-secondary">Смотреть видео</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- DIRECTIONS / НАВЫКИ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-tag">Основные направления</span>
+    <h2 class="section-h2">Что развиваем на занятиях</h2>
+    <p class="section-desc">Наша программа охватывает все ключевые навыки, необходимые ребёнку для успешного старта в школе — от математики и чтения до эмоционального интеллекта и самостоятельности.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Математика и логика</div>
+          <div class="skill-desc">Счёт, основы арифметики, пространственное мышление, логические задачи и закономерности.</div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Грамота и чтение</div>
+          <div class="skill-desc">Звуко-буквенный анализ, слоги, первые слова. Любовь к книгам как основа будущего успеха.</div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Творчество и рисование</div>
+          <div class="skill-desc">Развитие мелкой моторики, воображения и художественного восприятия через творческие практики.</div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Внимание и память</div>
+          <div class="skill-desc">Упражнения для развития концентрации, кратковременной и долговременной памяти, усидчивости.</div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Коммуникация</div>
+          <div class="skill-desc">Умение общаться в коллективе, выражать мысли, слушать и сотрудничать со сверстниками и взрослыми.</div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <div class="skill-title">Эмоциональный интеллект</div>
+          <div class="skill-desc">Понимание своих эмоций, саморегуляция, доброжелательность и уверенность в себе.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- КАК ПРОХОДЯТ ЗАНЯТИЯ + НАВЫКИ IMAGE -->
+<section class="section section-white">
+  <div class="container">
+    <div class="split">
+      <div class="split-img">
+        <img src="https://www.fullerenclub.ru/images/naviki.jpg" alt="Навыки и занятия"/>
+      </div>
+      <div class="split-text">
+        <span class="section-tag">Наш подход</span>
+        <h2 class="section-h2">Как проходят занятия?</h2>
+        <p class="lead">Занятия строятся на принципах гуманной педагогики: без принуждения, через интерес и радость открытий. Каждый ребёнок — это уникальная личность, и мы создаём пространство для его естественного развития.</p>
+        <div class="accent-line">
+          <div class="accent-line-bar"></div>
+          <div class="accent-line-text">Малые группы — до 8–10 детей, что позволяет уделить внимание каждому.</div>
+        </div>
+        <div class="accent-line">
+          <div class="accent-line-bar"></div>
+          <div class="accent-line-text">Игровые методики, нейропедагогика, элементы арт-терапии.</div>
+        </div>
+        <div class="accent-line">
+          <div class="accent-line-bar"></div>
+          <div class="accent-line-text">Регулярная обратная связь для родителей — вы всегда в курсе прогресса ребёнка.</div>
+        </div>
+        <div class="accent-line">
+          <div class="accent-line-bar"></div>
+          <div class="accent-line-text">Квалифицированные педагоги с опытом работы в инновационном образовании.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- РАСПИСАНИЕ -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 48px;">
+      <span class="section-tag" style="display:block; text-align:center;">Расписание занятий</span>
+      <h2 class="section-h2" style="margin-bottom:12px;">Когда и как часто</h2>
+      <p class="section-desc" style="margin:0 auto 40px; text-align:center;">Удобное расписание для детей 5–7 лет. Занятия проходят в небольших группах в уютных классах центра.</p>
+    </div>
+    <div class="raspisanie-img">
+      <img src="https://www.fullerenclub.ru/images/raspisanie1.jpg" alt="Расписание занятий"/>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- ПРОГРАММА ЖОХОВА -->
+<section class="section section-white">
+  <div class="container">
+    <div class="zhokhov-wrap">
+      <div class="zhokhov-img">
+        <img src="https://www.fullerenclub.ru/images/1klass.jpg" alt="1 класс по программе Жохова"/>
+      </div>
+      <div>
+        <div class="zhokhov-badge">
+          <span class="zhokhov-badge-dot"></span>
+          Набор открыт · 3-й поток
+        </div>
+        <span class="section-tag">Программа Жохова</span>
+        <h2 class="section-h2">Объявляется набор в первый класс</h2>
+        <p class="section-desc" style="margin-bottom:24px;">В нашем Центре программа Жохова успешно зарекомендовала себя — это уже 3-й набор. Методика позволяет детям освоить чтение, счёт и письмо значительно быстрее и естественнее, чем по традиционным программам.</p>
+        <p class="section-desc" style="margin-bottom:32px;">Организуется летняя площадка — идеальный старт перед школой в атмосфере игры и творчества.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px;">
+          <a href="https://max.ru/u/f9LHodD" target="_blank" rel="noopener noreferrer" class="btn-primary">Записаться на набор</a>
+          <a href="https://sistemazhokhova.ru/o_sisteme" target="_blank" rel="noopener noreferrer" class="btn-secondary">Узнать о методике</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- ВИДЕО О ЦЕНТРЕ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="video-wrap">
+      <span class="section-tag" style="display:block;">О центре</span>
+      <h2 class="section-h2" style="margin-bottom:12px; text-align:center;">Посмотрите, как мы работаем</h2>
+      <p class="section-desc" style="text-align:center; margin: 0 auto 36px;">Видео о подготовке к школе в нашем центре — живая атмосфера, любящие педагоги и счастливые дети.</p>
+      <a href="https://dzen.ru/video/watch/69d6026369103b5d20e6c250" target="_blank" rel="noopener noreferrer" class="video-thumb">
+        <img src="https://www.fullerenclub.ru/images/podgotovka.png" alt="Видео о подготовке к школе"/>
+        <div class="video-thumb-overlay">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- О ЦЕНТРЕ / СЕМЬЯ (dark) -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="family-inner">
+      <div class="family-img">
+        <img src="https://www.fullerenclub.ru/images/family.png" alt="Центр Вдохновение — семья"/>
+      </div>
+      <div class="family-text">
+        <span class="section-tag">О центре</span>
+        <h2 class="section-h2">Центр «Вдохновение» — это одна большая многодетная семья</h2>
+        <p class="lead">Мы создали пространство, где каждый ребёнок чувствует себя любимым и важным. Наши педагоги — не просто профессионалы, но люди с большим сердцем, которые понимают природу детского развития.</p>
+        <div class="family-concept">«Единое пространство:<br/>ребёнок — родитель — учитель»</div>
+        <a href="https://dzen.ru/video/watch/68bc068e11795e49739646bb" target="_blank" rel="noopener noreferrer" class="btn-primary">Смотреть видео о Центре</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- CTA -->
+<section class="section section-white">
+  <div class="container">
+    <div class="cta-wrap">
+      <div class="cta-quote-mark">"</div>
+      <p class="cta-quote">Дети нам отражают, что мы родители не хотим учиться у жизни</p>
+      <div class="cta-divider"></div>
+      <p class="cta-sub">из интервью Ефремовой Марии Викторовны</p>
+      <p class="section-desc" style="text-align:center; margin: 0 auto 32px;">Готовы сделать первый шаг вместе? Запишитесь на пробное занятие — и убедитесь сами, как интересно учиться в нашем центре.</p>
+      <a href="https://max.ru/u/f9LHodD" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:15px; padding:16px 40px;">Записаться на занятие</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- CONTACTS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="contacts-inner">
+      <h2 class="section-h2">Контакты</h2>
+      <p class="section-desc">Готовы ответить на все вопросы о программах и записи.</p>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Адрес</div>
+          <div class="contact-value">ул. Комсомольская Набережная, 22, г. Астрахань</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Телефон</div>
+          <div class="contact-value">+7 927 072 16 73</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top-line"></div>
+  <div class="container" style="padding-top:48px; padding-bottom:48px;">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="6" stroke="rgb(232,213,176)" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+            <circle cx="16" cy="5" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="16" cy="27" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="5" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="27" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <line x1="16" y1="10" x2="16" y2="5" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="16" y1="22" x2="16" y2="27" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="10" y1="16" x2="5" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="22" y1="16" x2="27" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+          </svg>
+          <div>
+            <span class="footer-name">Фуллерен</span>
+            <span class="footer-sub">Центр поддержки семьи</span>
+          </div>
+        </div>
+        <p class="footer-body">Образовательный центр квантовой педагогики и психологии. Наука, практика и поддержка семьи.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Документы</div>
+        <div class="footer-doc">
+          <div class="footer-doc-line"></div>
+          <div>
+            <div class="footer-doc-text">Образовательная лицензия</div>
+            <div class="footer-doc-num">№Л035-01261-30/03368646</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">Мы в сети</div>
+        <div class="footer-social">
+          <a href="https://dzen.ru/inspirecenter" target="_blank" rel="noopener noreferrer">
+            <span class="footer-sline"></span>
+            Канал Дзен
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 ЦКПиП Фуллерен. Все права защищены.</p>
+      <p class="footer-copy">Лицензия №Л035-01261-30/03368646</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+</script>
+</body>
+</html>
