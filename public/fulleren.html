@@ -562,6 +562,51 @@
     @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
     .footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
 
+    /* ── COURSES ── */
+    .courses-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 640px) { .courses-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .courses-grid { grid-template-columns: repeat(3, 1fr); } }
+    .course-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1.5px solid rgba(255,255,255,0.1);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      transition: transform 0.3s;
+    }
+    .course-card:hover { transform: translateY(-4px); }
+    .course-card-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      z-index: 0;
+    }
+    .course-card-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.72); z-index: 0; }
+    .course-card-content { position: relative; z-index: 10; display: flex; flex-direction: column; flex: 1; }
+    .course-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
+      margin-bottom: 20px;
+    }
+    .course-icon svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .course-title { font-family: "Cormorant", serif; font-size: 22px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .course-desc { font-family: "Golos Text", sans-serif; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.65); flex: 1; margin-bottom: 20px; }
+    .course-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; }
+    .course-age { font-family: "Golos Text", sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); }
+    .course-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 999px;
+      font-family: "Golos Text", sans-serif; font-size: 11px; font-weight: 600;
+      background: linear-gradient(130deg, #c9a96e, #e8d5b0);
+      color: #1a1a1a; text-decoration: none;
+      transition: opacity 0.3s; white-space: nowrap;
+    }
+    .course-btn:hover { opacity: 0.8; }
+    .course-btn svg { width: 11px; height: 11px; fill: none; stroke: #1a1a1a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(28px); }
@@ -766,6 +811,78 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- COURSES -->
+<section id="courses" class="section section-alt">
+  <div class="container">
+    <h2>Наши курсы</h2>
+    <div class="courses-grid">
+
+      <!-- Подготовка к школе -->
+      <div class="course-card">
+        <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/48d26136-c533-4c2a-978b-a2c70e3cfbff.png')"></div>
+        <div class="course-card-overlay"></div>
+        <div class="course-card-content">
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="course-title">Подготовка к школе</div>
+          <div class="course-desc">Приглашаем детей с родителями в наш Центр на развитие навыков, которые помогут быть уверенным не только в школе, но и в жизни</div>
+          <div class="course-footer">
+            <span class="course-age">для детей 5-7 лет</span>
+            <a href="https://www.fullerenclub.ru/podgotovka.html" target="_blank" rel="noopener noreferrer" class="course-btn">
+              Подробнее
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Летняя площадка -->
+      <div class="course-card">
+        <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2a47d22c-3843-4ffa-ab00-9e0b6df80822.png')"></div>
+        <div class="course-card-overlay"></div>
+        <div class="course-card-content">
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <div class="course-title">Летняя площадка</div>
+          <div class="course-desc">Когда ребенок приходит в первый класс, коммуникации становятся его первой задачей, на это уходит много сил, которых уже не хватает на учебу. Лето самое лучшее время решить этот вопрос, научиться навыкам коммуникации, завести новых друзей, с которыми можно радостно провести время.</div>
+          <div class="course-footer">
+            <span class="course-age">для детей 5-7 лет</span>
+            <a href="https://www.fullerenclub.ru/podgotovka.html#zhokhov" target="_blank" rel="noopener noreferrer" class="course-btn">
+              Подробнее
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Жоховская программа -->
+      <div class="course-card">
+        <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png')"></div>
+        <div class="course-card-overlay"></div>
+        <div class="course-card-content">
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="course-title">Жоховская программа</div>
+          <div class="course-desc">Объявляется 3-й поток 1-го класса по методике Жохова. 4 года началки за 1 год.</div>
+          <div class="course-footer">
+            <span class="course-age">для детей 5-7 лет</span>
+            <a href="https://www.fullerenclub.ru/podgotovka.html#zhokhov" target="_blank" rel="noopener noreferrer" class="course-btn">
+              Подробнее
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
