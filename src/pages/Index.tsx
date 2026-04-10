@@ -7,13 +7,9 @@ const FOUNDER_IMAGE = "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-
 
 
 const DIRECTIONS = [
-  { icon: "Brain", title: "Квантовая психология", desc: "Современные методы работы с сознанием, мышлением и эмоциональным интеллектом", count: 11, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/48d26136-c533-4c2a-978b-a2c70e3cfbff.png" },
-  { icon: "GraduationCap", title: "Инновационная педагогика", desc: "Передовые подходы к обучению и воспитанию детей и взрослых", count: 9, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2a47d22c-3843-4ffa-ab00-9e0b6df80822.png" },
-  { icon: "Heart", title: "Арт-терапия", desc: "Исцеление и развитие через творчество, рисунок, музыку и движение", count: 7, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png" },
-  { icon: "Users", title: "Семейные практики", desc: "Гармония в семье, детско-родительские отношения, системные расстановки", count: 8, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8064f6c5-0140-494c-9653-5ff4fcbee61c.jpg" },
-  { icon: "Sparkles", title: "Коучинг", desc: "Личностный рост, раскрытие потенциала и достижение жизненных целей", count: 6, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/5efdd7f9-fc3f-48cf-b3e7-9324838045c0.png" },
-  { icon: "Atom", title: "Квантовые технологии", desc: "Передовые научные методы саморазвития и трансформации личности", count: 5, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/8aa13d10-72a9-4f3f-99de-6c6a095a1ba3.png" },
-  { icon: "BookOpen", title: "Медитация и осознанность", desc: "Практики управления вниманием, снижения стресса и глубокого самопознания", count: 4, bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/d8ce199e-0b41-4efd-a7d1-ee84d8f75640.png" },
+  { icon: "Brain", title: "Подготовка к школе", desc: "Приглашаем детей с родителями в наш Центр на развитие навыков, которые помогут быть уверенным не только в школе, но и в жизни", count: "для детей 5-7 лет", url: "https://www.fullerenclub.ru/podgotovka.html", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/48d26136-c533-4c2a-978b-a2c70e3cfbff.png" },
+  { icon: "GraduationCap", title: "Летняя площадка", desc: "Когда ребенок приходит в первый класс, коммуникации становятся его первой задачей, на это уходит много сил, которых уже не хватает на учебу. Лето самое лучшее время решить этот вопрос, научиться навыкам коммуникации, завести новых друзей, с которыми можно радостно провести время.", count: "для детей 5-7 лет", url: "https://www.fullerenclub.ru/podgotovka.html#zhokhov", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2a47d22c-3843-4ffa-ab00-9e0b6df80822.png" },
+  { icon: "Heart", title: "Жоховская программа", desc: "Объявляется 3-й поток 1-го класса по методике Жохова. 4 года началки за 1 год.", count: "для детей 5-7 лет", url: "https://www.fullerenclub.ru/podgotovka.html#zhokhov", bg: "https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png" },
 ];
 
 const CLUBS = [
@@ -391,7 +387,21 @@ export default function Index() {
                   </div>
                   <h3 className="font-cormorant text-xl font-semibold mb-2" style={{ color: dir.bg ? "#fff" : "inherit" }}>{dir.title}</h3>
                   <p className="font-golos text-sm leading-relaxed mb-4 flex-1" style={{ color: dir.bg ? "rgba(255,255,255,0.65)" : "hsl(var(--muted-foreground))" }}>{dir.desc}</p>
-                  <span className="font-golos text-xs font-semibold" style={{ color: dir.bg ? "rgba(255,255,255,0.5)" : "hsl(var(--teal))" }}>{dir.count} программ</span>
+                  <div className="flex items-center justify-between mt-auto gap-3">
+                    <span className="font-golos text-xs font-semibold" style={{ color: dir.bg ? "rgba(255,255,255,0.5)" : "hsl(var(--teal))" }}>{dir.count}</span>
+                    {dir.url && (
+                      <a
+                        href={dir.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-golos text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-300 hover:opacity-80"
+                        style={{ background: "linear-gradient(130deg, #c9a96e, #e8d5b0)", color: "#1a1a1a" }}
+                      >
+                        Подробнее
+                        <Icon name="ArrowRight" size={11} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
