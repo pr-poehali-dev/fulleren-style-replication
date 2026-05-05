@@ -689,6 +689,42 @@
     }
     .footer-link:hover { color: var(--gold-light); }
 
+    /* ── VIDEO BTN ── */
+    .video-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      border: 1.5px solid rgba(232,160,32,0.4);
+      background: rgba(232,160,32,0.08);
+      text-decoration: none;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+    .video-btn:hover {
+      background: rgba(232,160,32,0.18);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .video-btn-play {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .video-btn-play svg {
+      width: 12px; height: 12px;
+      fill: var(--navy-deep);
+      stroke: none;
+      margin-left: 2px;
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
@@ -825,6 +861,12 @@
         <p class="expert-desc">
           Многолетние разногласия с подростком найдут своё решение. <strong>Уникальные технологии переговоров и разрешения конфликтов</strong> позволят превратить взаимные претензии в конструктивный диалог.
         </p>
+        <a href="https://dzen.ru/video/watch/69f60df89414e9308a2b88b6" target="_blank" class="video-btn">
+          <div class="video-btn-play">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          Смотреть видео-приглашение
+        </a>
       </div>
     </div>
   </div>
