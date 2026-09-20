@@ -121,6 +121,36 @@
       color: rgba(255,255,255,0.5);
       letter-spacing: 0.02em;
     }
+    .page-head-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .page-head-title-block { text-align: left; }
+    .page-head-title-block .page-head-title { margin: 0 0 14px; text-align: left; }
+    .page-head-badge {
+      flex-shrink: 0;
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      border: 1px solid rgba(232,213,176,0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(232,213,176);
+      font-family: 'Cormorant', serif;
+      line-height: 1.15;
+    }
+    .page-head-badge .num { font-size: 30px; font-weight: 500; }
+    .page-head-badge .lbl { font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; }
+    @media (max-width: 640px) {
+      .page-head-inner { flex-direction: column; text-align: center; }
+      .page-head-title-block { text-align: center; }
+      .page-head-title-block .page-head-title { text-align: center; }
+    }
 
     /* ── HERO ── */
     .hero {
@@ -212,6 +242,8 @@
       padding: 24px 28px;
     }
     .hero-desc strong { color: var(--amber-light); }
+    .hero-desc p { margin: 0; }
+    .hero-desc p + p { margin-top: 14px; }
     .hero-cta {
       display: inline-block;
       padding: 15px 40px;
@@ -614,8 +646,16 @@
 <!-- PAGE HEAD -->
 <div class="page-head">
   <div class="container">
-    <div class="page-head-title">2 ступень (возраст 5–7 класс) Центра квантовой педагогики и психологии «Фуллерен»</div>
-    <div class="page-head-sub">Раздельное образование мальчиков и девочек с погружением в предметы</div>
+    <div class="page-head-inner">
+      <div class="page-head-title-block">
+        <div class="page-head-title">II ступень<br>(возраст 5–7 класс)<br>Центра квантовой педагогики и психологии «Фуллерен»</div>
+        <div class="page-head-sub">Раздельное образование мальчиков и девочек с погружением в предметы</div>
+      </div>
+      <div class="page-head-badge">
+        <span class="num">9</span>
+        <span class="lbl">лет нам</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -627,7 +667,7 @@
       <div class="hero-img-label">Класс мальчиков</div>
     </div>
     <div class="hero-img-box girls">
-      <img src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/151f5c5b-efe9-4e43-bcc5-e09e47710307.jpg" alt="Девочки обсуждают проект"/>
+      <img src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/bbad7653-2686-4fc1-a203-5fd29c838d90.jpg" alt="Девочки обсуждают проект"/>
       <div class="hero-img-label">Класс девочек</div>
     </div>
   </div>
@@ -636,7 +676,8 @@
     <h1 class="hero-h1">Раздельное образование 5–7 классов: пространство, где каждый раскрывает свой потенциал в своём темпе.</h1>
     <div class="hero-badge">🔥 Открыт набор в класс для мальчиков 10–12 лет</div>
     <div class="hero-desc">
-      Открываем набор в класс для мальчиков 10–12 лет с упором на естественные науки — <strong>физико-химико-биологический класс</strong>. Для девочек 5–7 классов в Центре уже сформирован и успешно работает отдельный класс с собственной программой развития. Ведётся дополнительный набор в этот класс.
+      <p>Открываем набор в класс для мальчиков 10–12 лет с упором на естественные науки — <strong>физико-химико-биологический класс</strong>.</p>
+      <p>Для девочек 5–7 классов в Центре уже сформирован и успешно работает отдельный класс с собственной программой развития. Ведётся дополнительный набор в этот класс.</p>
     </div>
     <a href="#contacts" class="hero-cta">Записаться на встречу</a>
   </div>
