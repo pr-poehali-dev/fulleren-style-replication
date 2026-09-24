@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1 ступень: Начальная школа (Система Жохова) — Центр Фуллерен, Астрахань</title>
+  <meta name="description" content="Почему Центр квантовой педагогики и психологии «Фуллерен» выбирает систему Жохова для начальной школы. 8 причин, анатомия урока, нейрофизиология обучения. Астрахань."/>
+  <meta property="og:title" content="1 ступень: Начальная школа — Система Жохова | Центр «Фуллерен»"/>
+  <meta property="og:description" content="4 года начальной школы за 1 год: 8 причин, почему Центр «Фуллерен» доверяет системе Жохова."/>
+  <meta property="og:image" content="https://www.fullerenclub.ru/images/nachalka/hero.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://www.fullerenclub.ru/images/nachalka/hero.jpg"/>
+  <link rel="icon" type="image/png" href="/images/shared/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Golos+Text:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f4f6f9;
+      --fg: #131c2e;
+      --muted: #6b7a96;
+      --border: #d4dbe8;
+      --section-alt: #edf0f5;
+      --navy: #131c2e;
+      --navy-deep: #0a0e18;
+      --teal: #1ba3a3;
+      --blue: #1a5fb4;
+      --sky: #3b82c4;
+      --amber: #e8a020;
+      --amber-light: #f5c842;
+      --lavender: #8b7cc9;
+      --emerald: #1ba36f;
+      --rose: #c2555a;
+      --gold1: #e8d5b0;
+      --gold2: #c9a96e;
+      --gold3: #f5e6cc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Golos Text", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: "Cormorant", serif; }
+    strong { font-weight: 700; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    @media (min-width: 768px) { .container { padding: 0 48px; } }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(10,10,14,0.55);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(232,213,176,0.06);
+      transition: all 0.5s ease;
+    }
+    nav.scrolled {
+      padding: 10px 40px;
+      background: rgba(10,10,14,0.96);
+      border-bottom: 1px solid rgba(232,213,176,0.12);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo svg { width: 28px; height: 28px; opacity: 0.8; }
+    .nav-logo-name {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgb(232,213,176);
+      display: block;
+    }
+    .nav-logo-sub {
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(232,213,176,0.45);
+      display: block;
+    }
+    .nav-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "Golos Text", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-back:hover { color: rgb(232,213,176); }
+    .nav-back svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(8,15,35,0.92) 0%, rgba(8,15,35,0.80) 50%, rgba(8,15,35,0.55) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 10;
+      max-width: 760px;
+      padding-top: 130px;
+      padding-bottom: 64px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 26px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1.5px solid rgba(232,213,176,0.4);
+      color: rgb(232,213,176);
+      background: rgba(232,213,176,0.08);
+    }
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: rgb(232,213,176); display: inline-block; }
+    .hero-h1 {
+      font-family: "Cormorant", serif;
+      font-weight: 300;
+      font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+      line-height: 1.18;
+      color: #fff;
+      margin-bottom: 36px;
+      max-width: 680px;
+    }
+    .hero-h1-gold {
+      background: linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      background: linear-gradient(130deg, #8B5E3C 0%, #c9a96e 50%, #8B5E3C 100%);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 24px rgba(201,169,110,0.35);
+      transition: opacity 0.3s, transform 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: scale(1.04); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: "Golos Text", sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.04);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.5); }
+
+    /* ── METRICS STRIP ── */
+    .metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 720px; }
+    @media (min-width: 700px) { .metrics-grid { grid-template-columns: repeat(4, 1fr); } }
+    .metric-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(232,213,176,0.18);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+    .metric-num {
+      font-family: "Cormorant", serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      font-weight: 600;
+      margin-bottom: 4px;
+      background: linear-gradient(130deg, #e8d5b0 0%, #f5e6cc 40%, #c9a96e 70%, #e8d5b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .metric-label { font-size: 11px; line-height: 1.4; color: rgba(255,255,255,0.6); }
+
+    /* ── DIVIDER ── */
+    .divider { display: flex; align-items: center; justify-content: center; }
+    .divider-line {
+      height: 1px; width: 100%; max-width: 900px; margin: 0 48px;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.35), rgba(232,213,176,0.6), rgba(201,169,110,0.35), transparent);
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 76px 0; }
+    @media (min-width: 768px) { .section { padding: 108px 0; } }
+    .section-white { background: #fff; }
+    .section-alt { background: var(--section-alt); }
+    .section-navy { background: var(--navy-deep); }
+
+    .sec-label {
+      font-family: "Golos Text", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+      text-align: center;
+      display: block;
+    }
+    .sec-label.on-dark { color: rgb(232,213,176); }
+    .sec-title {
+      font-family: "Cormorant", serif;
+      font-weight: 400;
+      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+      color: var(--navy);
+      line-height: 1.2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 20px;
+    }
+    .sec-title.on-dark { color: #fff; }
+    .sec-intro {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--muted);
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px;
+    }
+    .sec-intro.on-dark { color: rgba(255,255,255,0.6); }
+
+    /* ── INTENSIVE TRACK ── */
+    .intensive-wrap { max-width: 760px; margin: 0 auto; text-align: center; }
+    .intensive-cards { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 640px; margin: 40px auto 0; text-align: left; }
+    @media (min-width: 640px) { .intensive-cards { grid-template-columns: 1fr 1fr; } }
+    .intensive-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 22px 24px;
+    }
+    .intensive-card-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      color: rgb(232,213,176);
+      margin-bottom: 8px;
+    }
+    .intensive-card-title svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .intensive-card-text { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.55); }
+
+    /* ── REASONS GRID ── */
+    .reasons-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 700px) { .reasons-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1080px) { .reasons-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .reason-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reason-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,169,110,0.45);
+      box-shadow: 0 16px 44px rgba(19,28,46,0.1);
+    }
+    .reason-icon {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .reason-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .reason-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .reason-title {
+      font-family: "Cormorant", serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.3;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .reason-desc { font-size: 14px; line-height: 1.75; color: var(--muted); }
+    .reason-desc strong { color: var(--navy); }
+    .reason-footer {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .reason-footer .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+    .reason-icon.amber, .reason-num.amber, .reason-footer .dot.amber { color: var(--amber); background: rgba(232,160,32,0.12); }
+    .reason-icon.blue, .reason-num.blue, .reason-footer .dot.blue { color: var(--blue); background: rgba(26,95,180,0.1); }
+    .reason-icon.teal, .reason-num.teal, .reason-footer .dot.teal { color: var(--teal); background: rgba(27,163,163,0.1); }
+    .reason-icon.gold, .reason-num.gold, .reason-footer .dot.gold { color: var(--gold2); background: rgba(201,169,110,0.14); }
+    .reason-icon.lavender, .reason-num.lavender, .reason-footer .dot.lavender { color: var(--lavender); background: rgba(139,124,201,0.12); }
+    .reason-icon.rose, .reason-num.rose, .reason-footer .dot.rose { color: var(--rose); background: rgba(194,85,90,0.12); }
+    .reason-icon.emerald, .reason-num.emerald, .reason-footer .dot.emerald { color: var(--emerald); background: rgba(27,163,111,0.1); }
+    .reason-icon.sky, .reason-num.sky, .reason-footer .dot.sky { color: var(--sky); background: rgba(59,130,196,0.12); }
+    .reason-num, .reason-footer .dot { background: none !important; }
+    .reason-footer .dot { display: inline-block; }
+    .reason-footer .dot.amber { background: var(--amber) !important; }
+    .reason-footer .dot.blue { background: var(--blue) !important; }
+    .reason-footer .dot.teal { background: var(--teal) !important; }
+    .reason-footer .dot.gold { background: var(--gold2) !important; }
+    .reason-footer .dot.lavender { background: var(--lavender) !important; }
+    .reason-footer .dot.rose { background: var(--rose) !important; }
+    .reason-footer .dot.emerald { background: var(--emerald) !important; }
+    .reason-footer .dot.sky { background: var(--sky) !important; }
+
+    /* ── SYNTHESIS CARD (dark, 9th) ── */
+    .synthesis-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 30px;
+      background: linear-gradient(150deg, #1b2340 0%, #0a0e18 80%);
+      border: 1.5px solid rgba(232,213,176,0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .synthesis-glow {
+      position: absolute; right: -40px; bottom: -40px;
+      width: 190px; height: 190px;
+      background: rgba(201,169,110,0.18);
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    .synthesis-badge {
+      position: relative; z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(232,213,176,0.25);
+      color: rgb(232,213,176);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    .synthesis-title { position: relative; z-index: 1; font-family: "Cormorant", serif; font-weight: 600; font-size: 22px; margin-bottom: 12px; }
+    .synthesis-desc { position: relative; z-index: 1; font-size: 13.5px; line-height: 1.75; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
+    .synthesis-link {
+      position: relative; z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgb(232,213,176);
+      text-decoration: none;
+      transition: gap 0.3s;
+    }
+    .synthesis-link:hover { gap: 12px; }
+    .synthesis-link svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── LESSON FLOW (interactive) ── */
+    .lesson-tabs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 40px 0 32px; max-width: 780px; margin-left: auto; margin-right: auto; }
+    @media (min-width: 700px) { .lesson-tabs-grid { grid-template-columns: repeat(4, 1fr); } }
+    .lesson-tab-btn {
+      cursor: pointer;
+      text-align: left;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1.5px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.55);
+      transition: all 0.3s;
+      font-family: "Golos Text", sans-serif;
+    }
+    .lesson-tab-btn:hover { color: #fff; border-color: rgba(232,213,176,0.3); }
+    .lesson-tab-btn .time { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; opacity: 0.8; }
+    .lesson-tab-btn .label { font-weight: 700; font-size: 14px; margin-top: 4px; }
+    .lesson-tab-btn.active-tab {
+      background: linear-gradient(135deg, rgba(201,169,110,0.28), rgba(232,213,176,0.1));
+      border-color: rgba(232,213,176,0.55);
+      color: #fff;
+    }
+    .lesson-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 32px 28px;
+      backdrop-filter: blur(10px);
+    }
+    @media (min-width: 700px) { .lesson-card { padding: 40px; } }
+    .lesson-card-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .lesson-badge {
+      display: inline-flex;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(201,169,110,0.16);
+      border: 1px solid rgba(201,169,110,0.4);
+      color: rgb(232,213,176);
+    }
+    .lesson-step-num { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .lesson-title { font-family: "Cormorant", serif; font-weight: 500; font-size: clamp(1.3rem, 2.8vw, 1.8rem); color: #fff; margin-bottom: 16px; line-height: 1.35; }
+    .lesson-desc { font-size: 14.5px; line-height: 1.8; color: rgba(255,255,255,0.65); margin-bottom: 26px; }
+    .lesson-highlights { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 700px) { .lesson-highlights { grid-template-columns: repeat(3, 1fr); } }
+    .lesson-highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+    }
+    .lesson-highlight-item .check { color: rgb(232,213,176); font-weight: 700; flex-shrink: 0; }
+
+    /* ── NEURO CARDS ── */
+    .neuro-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 640px) { .neuro-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1080px) { .neuro-grid { grid-template-columns: repeat(4, 1fr); } }
+    .neuro-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      transition: all 0.3s;
+    }
+    .neuro-card:hover { transform: translateY(-4px); border-color: rgba(201,169,110,0.4); box-shadow: 0 12px 36px rgba(19,28,46,0.08); }
+    .neuro-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .neuro-icon svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .neuro-title { font-family: "Cormorant", serif; font-weight: 600; font-size: 18px; color: var(--navy); margin-bottom: 10px; }
+    .neuro-text { font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer { background: rgb(8,8,12); }
+    .footer-top-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(232,213,176,0.4), rgba(201,169,110,0.6), rgba(232,213,176,0.4), transparent); }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-brand svg { width: 28px; height: 28px; opacity: 0.8; }
+    .footer-name { font-family: "Cormorant", serif; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; font-size: 14px; color: rgb(232,213,176); display: block; }
+    .footer-sub { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232,213,176,0.45); display: block; }
+    .footer-body { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.35); }
+    .footer-col-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232,213,176,0.45); margin-bottom: 12px; }
+    .footer-doc { display: flex; align-items: flex-start; gap: 8px; }
+    .footer-doc-line { width: 1px; height: 40px; margin-top: 2px; flex-shrink: 0; background: rgba(232,213,176,0.2); }
+    .footer-doc-text { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer-doc-num { font-size: 12px; font-weight: 500; color: rgba(232,213,176,0.7); margin-top: 4px; }
+    .footer-social a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+    .footer-social a:hover { color: rgb(232,213,176); }
+    .footer-sline { width: 1px; height: 12px; background: rgba(232,213,176,0.4); transition: height 0.3s; }
+    .footer-social a:hover .footer-sline { height: 20px; }
+    .footer-divider { height: 1px; background: rgba(232,213,176,0.07); margin-bottom: 24px; }
+    .footer-bottom { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="https://www.fullerenclub.ru/" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="6" stroke="rgb(232,213,176)" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+      <circle cx="16" cy="5" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="16" cy="27" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="5" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <circle cx="27" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+      <line x1="16" y1="10" x2="16" y2="5" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="16" y1="22" x2="16" y2="27" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="10" y1="16" x2="5" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+      <line x1="22" y1="16" x2="27" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+    </svg>
+    <div>
+      <span class="nav-logo-name">Фуллерен</span>
+      <span class="nav-logo-sub">Центр поддержки семьи</span>
+    </div>
+  </a>
+  <a href="https://www.fullerenclub.ru/" class="nav-back">
+    <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    Сайт Центра
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="/images/nachalka/hero.jpg" alt="Начальная школа по системе Жохова в Центре Фуллерен"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        1 ступень: Начальная школа (1–4 классы)
+      </div>
+      <h1 class="hero-h1">Почему центр «Фуллерен» выбирает <span class="hero-h1-gold">систему Жохова</span></h1>
+      <div class="hero-btns">
+        <a href="#reasons" class="btn-primary">
+          8 причин выбора
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <a href="https://dzen.ru/video/watch/69bafc4bba64830c7bf6d8db" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#e2574c"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Смотреть интервью с основателем Центра
+        </a>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">9 лет</div>
+          <div class="metric-label">Безоценочной системы в Центре</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">Без ДЗ</div>
+          <div class="metric-label">Усвоение материала в классе</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">50–80</div>
+          <div class="metric-label">Задач и примеров за 40 минут</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">4 года &rarr; 1</div>
+          <div class="metric-label">Программа начальной школы за год</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTENSIVE TRACK -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="intensive-wrap">
+      <span class="sec-label on-dark">Интенсивная траектория</span>
+      <h2 class="sec-title on-dark" style="margin-bottom:20px;">4-х летняя программа за год</h2>
+      <p class="sec-intro on-dark" style="margin-bottom:0;">За один год дети проходят программу 4-х лет начальной школы. Есть возможность присоединения детей второго и третьего класса.</p>
+      <div class="intensive-cards">
+        <div class="intensive-card">
+          <div class="intensive-card-title">
+            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            Естественное ускорение
+          </div>
+          <div class="intensive-card-text">Без зубрёжки и перегрузок: методика активизирует ассоциативные связи и естественную скорость детского восприятия.</div>
+        </div>
+        <div class="intensive-card">
+          <div class="intensive-card-title">
+            <svg viewBox="0 0 24 24"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+            Донабор 2 и 3 классов
+          </div>
+          <div class="intensive-card-text">Мягкая адаптация для ребят, переходящих из традиционной школы, с устранением пробелов и страха ошибок.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- REASONS -->
+<section id="reasons" class="section section-white">
+  <div class="container">
+    <span class="sec-label">Фундамент выбора</span>
+    <h2 class="sec-title">8 ключевых причин, почему Центр «Фуллерен» доверяет системе Жохова</h2>
+    <p class="sec-intro">Мы объединяем квантовую педагогику — целостный взгляд на безграничный потенциал сознания — с выверенной физиологической и когнитивной методологией Владимира Ивановича Жохова.</p>
+
+    <div class="reasons-grid">
+
+      <!-- 1 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon amber"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="reason-num amber">01. Психологическая свобода</div>
+          <div class="reason-title">Внутренняя мотивация без «дофаминовой морковки»</div>
+          <div class="reason-desc">Центр 9 лет работает в безоценочной системе. Методика взращивает глубокую внутреннюю потребность и личную энергию постигать новое для себя, а не ради внешней пятёрки или родительского одобрения.</div>
+        </div>
+        <div class="reason-footer"><span class="dot amber"></span>Формирует здоровую самооценку на всю жизнь</div>
+      </div>
+
+      <!-- 2 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon blue"><svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+          <div class="reason-num blue">02. Мышление будущего</div>
+          <div class="reason-title">Структурирование хаоса против шаблонов ИИ</div>
+          <div class="reason-desc">Чтобы оставаться востребованными в будущем, дети учатся видеть хаотичный массив данных, самостоятельно синтезировать из него стройную систему и мыслить эвристически, а не просто действовать по готовым шаблонам.</div>
+        </div>
+        <div class="reason-footer"><span class="dot blue"></span>Развитие над-алгоритмического интеллекта</div>
+      </div>
+
+      <!-- 3 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon teal"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <div class="reason-num teal">03. Бережная среда</div>
+          <div class="reason-title">Разный темп развития без ярлыков и стресса</div>
+          <div class="reason-desc">В каждый урок заложен полифоничный уровень сложности: пока один ребёнок только осваивает буквы, другой уже читает бегло. Циклическое повторение позволяет двигаться вперёд и быстрым спринтерам, и вдумчивым созерцателям.</div>
+        </div>
+        <div class="reason-footer"><span class="dot teal"></span>Никаких ярлыков и психологических комплексов</div>
+      </div>
+
+      <!-- 4 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon gold"><svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+          <div class="reason-num gold">04. Индуктивный метод</div>
+          <div class="reason-title">Самостоятельный вывод законов и правил</div>
+          <div class="reason-desc">Вместо заучивания готовых правил дети решают серию усложняющихся примеров. Они подмечают закономерности и <strong>сами формулируют правила</strong>, глубоко понимая логику предмета.</div>
+        </div>
+        <div class="reason-footer"><span class="dot gold"></span>Осознание сути вместо кратковременной зубрежки</div>
+      </div>
+
+      <!-- 5 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon lavender"><svg viewBox="0 0 24 24"><path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></div>
+          <div class="reason-num lavender">05. Стратегия на годы</div>
+          <div class="reason-title">Глубокая преемственность со средней школой</div>
+          <div class="reason-desc">Методика превентивно выстраивает понятийный аппарат для сложнейших тем 5–9 классов: чёткое смысловое разграничение причастий и отглагольных прилагательных, грамотная постановка вопросов, языковое чутьё.</div>
+        </div>
+        <div class="reason-footer"><span class="dot lavender"></span>Лёгкий переход в 5 класс без стресса</div>
+      </div>
+
+      <!-- 6 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon rose"><svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+          <div class="reason-num rose">06. Тело и мозг</div>
+          <div class="reason-title">Нейропсихология, конторки и хоровое пение</div>
+          <div class="reason-desc">Физиологически дружелюбная среда: работа за ростовыми конторками, артикуляционная гимнастика, тренировка восприятия речи разных дикторов, музыка для настройки мозга и хоровое пение.</div>
+        </div>
+        <div class="reason-footer"><span class="dot rose"></span>Сохранение осанки, зрения и ментального баланса</div>
+      </div>
+
+      <!-- 7 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon emerald"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="reason-num emerald">07. Экология времени</div>
+          <div class="reason-title">Высочайшая динамика без переутомления и ДЗ</div>
+          <div class="reason-desc">Благодаря индивидуальным маркерным доскам и отсутствию бытовых задержек дети успевают прорешать десятки примеров за урок, не испытывая усталости и без необходимости делать домашние задания дома.</div>
+        </div>
+        <div class="reason-footer"><span class="dot emerald"></span>Спокойные семейные вечера без слез над тетрадями</div>
+      </div>
+
+      <!-- 8 -->
+      <div class="reason-card">
+        <div>
+          <div class="reason-icon sky"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <div class="reason-num sky">08. Зрелость характера</div>
+          <div class="reason-title">Собранность, фокус и готовность к нагрузкам</div>
+          <div class="reason-desc">Выпускники программы при переходе в среднюю школу демонстрируют отличную собранность, умение концентрироваться, организовывать своё время и легко справляться с усложняющимися учебными задачами.</div>
+        </div>
+        <div class="reason-footer"><span class="dot sky"></span>Осознанная воля и учебная самостоятельность</div>
+      </div>
+
+      <!-- 9: Synthesis -->
+      <div class="synthesis-card">
+        <div class="synthesis-glow"></div>
+        <div>
+          <div class="synthesis-badge">Синтез Центра «Фуллерен»</div>
+          <div class="synthesis-title">Квантовая педагогика + Практика Жохова</div>
+          <div class="synthesis-desc">Мы видим в ребёнке не «пустой сосуд», который нужно наполнить правилами, а целостную систему с колоссальной энергией познания. Методика Жохова даёт совершенный математический и нейрофизиологический каркас для раскрытия этой природы.</div>
+        </div>
+        <a href="https://dzen.ru/video/watch/69df86431851bd6b6fc955c4" target="_blank" rel="noopener noreferrer" class="synthesis-link">
+          Узнать больше о концепции
+          <svg viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LESSON FLOW -->
+<section id="lesson-flow" class="section section-navy">
+  <div class="container">
+    <span class="sec-label on-dark">Анатомия урока</span>
+    <h2 class="sec-title on-dark">Как устроены 40 минут: почему дети не устают?</h2>
+    <p class="sec-intro on-dark" style="margin-bottom:0;">В системе Жохова переключение модальностей происходит каждые 2–4 минуты. Нажмите на этап, чтобы увидеть нейробиологический эффект:</p>
+
+    <div class="lesson-tabs-grid">
+      <button onclick="setLessonStep(0)" id="step-btn-0" class="lesson-tab-btn active-tab">
+        <div class="time">01–05 мин</div>
+        <div class="label">Настройка и пение</div>
+      </button>
+      <button onclick="setLessonStep(1)" id="step-btn-1" class="lesson-tab-btn">
+        <div class="time">06–20 мин</div>
+        <div class="label">Маркерные экраны</div>
+      </button>
+      <button onclick="setLessonStep(2)" id="step-btn-2" class="lesson-tab-btn">
+        <div class="time">21–32 мин</div>
+        <div class="label">Конторки и речь</div>
+      </button>
+      <button onclick="setLessonStep(3)" id="step-btn-3" class="lesson-tab-btn">
+        <div class="time">33–40 мин</div>
+        <div class="label">Синтез и триумф</div>
+      </button>
+    </div>
+
+    <div id="lesson-step-content" class="lesson-card"></div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div></div>
+
+<!-- NEURO -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="sec-label">Нейрофизиология</span>
+    <h2 class="sec-title">Тело ребёнка не предназначено для сидения 5 часов подряд</h2>
+    <p class="sec-intro">В системе Жохова когнитивное развитие неразрывно связано с кинестетикой, дыханием и слуховыми центрами коры головного мозга.</p>
+
+    <div class="neuro-grid">
+      <div class="neuro-card">
+        <div class="neuro-icon" style="background:rgba(27,163,163,0.1); color:var(--teal);"><svg viewBox="0 0 24 24"><path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg></div>
+        <div class="neuro-title">Артикуляционная гимнастика</div>
+        <div class="neuro-text">Связь мелких мышц речевого аппарата с лобными долями мозга. Тренировка дикции стимулирует центры речевого планирования и письма.</div>
+      </div>
+      <div class="neuro-card">
+        <div class="neuro-icon" style="background:rgba(26,95,180,0.1); color:var(--blue);"><svg viewBox="0 0 24 24"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div>
+        <div class="neuro-title">Мульти-дикторский слух</div>
+        <div class="neuro-text">Аудиозадания озвучены разными тембрами и интонациями. Это снимает привязку к голосу одной учительницы и развивает пластичность аудиальной коры.</div>
+      </div>
+      <div class="neuro-card">
+        <div class="neuro-icon" style="background:rgba(232,160,32,0.12); color:var(--amber);"><svg viewBox="0 0 24 24"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <div class="neuro-title">Конторки и смена поз</div>
+        <div class="neuro-text">Принцип динамических поз: часть урока стоя у конторок, часть сидя. Профилактика сколиоза, улучшение циркуляции крови и естественная бодрость без утомления.</div>
+      </div>
+      <div class="neuro-card">
+        <div class="neuro-icon" style="background:rgba(194,85,90,0.12); color:var(--rose);"><svg viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="neuro-title">Хоровое пение</div>
+        <div class="neuro-text">Синхронизация сердечного ритма класса, выравнивание эмоционального фона, мягкий сброс кортизола и ощущение глубокой сопричастности с коллективом.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top-line"></div>
+  <div class="container" style="padding-top:48px;padding-bottom:48px;">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="6" stroke="rgb(232,213,176)" stroke-width="1" stroke-opacity="0.7" fill="none"/>
+            <circle cx="16" cy="5" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="16" cy="27" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="5" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <circle cx="27" cy="16" r="2" fill="rgb(232,213,176)" fill-opacity="0.5"/>
+            <line x1="16" y1="10" x2="16" y2="5" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="16" y1="22" x2="16" y2="27" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="10" y1="16" x2="5" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+            <line x1="22" y1="16" x2="27" y2="16" stroke="rgb(232,213,176)" stroke-width="0.8" stroke-opacity="0.4"/>
+          </svg>
+          <div>
+            <span class="footer-name">Фуллерен</span>
+            <span class="footer-sub">Центр поддержки семьи</span>
+          </div>
+        </div>
+        <p class="footer-body">Образовательный центр квантовой педагогики и психологии. Наука, практика и поддержка семьи.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Документы</div>
+        <div class="footer-doc">
+          <div class="footer-doc-line"></div>
+          <div>
+            <div class="footer-doc-text">Образовательная лицензия</div>
+            <div class="footer-doc-num">№Л035-01261-30/03368646</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">Мы в сети</div>
+        <div class="footer-social">
+          <a href="https://dzen.ru/inspirecenter" target="_blank" rel="noopener noreferrer">
+            <span class="footer-sline"></span>
+            Канал Дзен
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 ЦКПиП Фуллерен. Все права защищены.</p>
+      <p class="footer-copy">Лицензия №Л035-01261-30/03368646</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  const lessonSteps = [
+    {
+      title: "01–05 мин: Настройка мозга и хоровое пение",
+      badge: "Эмоциональный резонанс",
+      description: "Урок начинается не со строгого замечания, а со специальной гармонизирующей музыки или совместного пения доброй песни. Это выравнивает частоту дыхания, снимает тревожность после дороги и настраивает полушария на согласованную работу.",
+      highlights: [
+        "Снижение уровня кортизола (гормона стресса)",
+        "Формирование тёплой атмосферы сотворчества",
+        "Включение слуховой коры и артикуляционная разминка"
+      ]
+    },
+    {
+      title: "06–20 мин: Индивидуальные маркерные экраны",
+      badge: "Сверхплотность и обратная связь",
+      description: "Каждый ребёнок держит персональную маркерную доску. Учитель задаёт вопрос — через 5 секунд все синхронно показывают ответы. Ошибся? Быстро стёр пальцем и исправил! Никакого стыда перед классом и страха испортить тетрадь.",
+      highlights: [
+        "Решение 30–40 примеров за 15 минут",
+        "100% включённость: спрятаться на задней парте невозможно",
+        "Моментальная педагогическая коррекция без красных чернил"
+      ]
+    },
+    {
+      title: "21–32 мин: Динамическая смена поз и конторки",
+      badge: "Физиологический драйв",
+      description: "Дети встают за ростовые конторки или подходят к классным доскам. Смена положения тела разгружает позвоночник, активизирует проприоцепцию и вестибулярный аппарат. В это время разбираются сложные задачи на поиск закономерностей.",
+      highlights: [
+        "Профилактика гиподинамии и нарушений зрения",
+        "Слушание заданий разными дикторскими голосами",
+        "Групповые обсуждения гипотез и индуктивный вывод правил"
+      ]
+    },
+    {
+      title: "33–40 мин: Синтез, триумф открытий и рефлексия",
+      badge: "Закрепление успеха",
+      description: "Финальный аккорд урока: дети подводят итоги своих открытий, решают победный логический ребус и переживают триумф: «Мы сегодня поняли то, что учат в старших классах!». Дети выходят из класса полными сил, а не опустошёнными.",
+      highlights: [
+        "Якорение победы и позитивного образа собственного интеллекта",
+        "Никаких заданий на дом — материал усвоен на 100%",
+        "Сохранение свежести для творчества и спорта"
+      ]
+    }
+  ];
+
+  function setLessonStep(index) {
+    const step = lessonSteps[index];
+    const container = document.getElementById('lesson-step-content');
+
+    document.querySelectorAll('.lesson-tab-btn').forEach((btn, i) => {
+      btn.classList.toggle('active-tab', i === index);
+    });
+
+    container.innerHTML = `
+      <div class="lesson-card-top">
+        <span class="lesson-badge">${step.badge}</span>
+        <span class="lesson-step-num">Шаг ${index + 1} из 4</span>
+      </div>
+      <h3 class="lesson-title">${step.title}</h3>
+      <p class="lesson-desc">${step.description}</p>
+      <div class="lesson-highlights">
+        ${step.highlights.map(h => `
+          <div class="lesson-highlight-item">
+            <span class="check">✓</span>
+            <span>${h}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    setLessonStep(0);
+  });
+</script>
+</body>
+</html>
