@@ -646,7 +646,6 @@
   </a>
   <ul class="nav-links">
     <li><a href="#home" onclick="smoothScroll('home')" class="active" id="nav-home">Главная</a></li>
-    <li><a href="#meetups" onclick="smoothScroll('meetups')" id="nav-meetups">Встречи</a></li>
     <li><a href="#interview" onclick="smoothScroll('interview')" id="nav-interview">Интервью</a></li>
     <li><a href="#contacts" onclick="smoothScroll('contacts')" id="nav-contacts">Контакты</a></li>
   </ul>
@@ -665,7 +664,6 @@
   <div class="mobile-menu-label">Фуллерен</div>
   <div class="mobile-menu-line"></div>
   <a href="#home" onclick="smoothScroll('home');toggleMenu()">Главная</a>
-  <a href="#meetups" onclick="smoothScroll('meetups');toggleMenu()">Встречи</a>
   <a href="#interview" onclick="smoothScroll('interview');toggleMenu()">Интервью</a>
   <a href="#contacts" onclick="smoothScroll('contacts');toggleMenu()">Контакты</a>
 </div>
@@ -673,7 +671,7 @@
 <!-- HERO -->
 <section id="home">
   <div class="hero-bg">
-    <img src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/16d29147-af1f-494a-ad66-5570977b1b4b.jpg" alt="Фуллерен"/>
+    <img src="/images/shared/kosmos1.jpg" alt="Фуллерен"/>
     <div class="hero-overlay"></div>
   </div>
   <div class="container">
@@ -686,7 +684,6 @@
       <h1 class="hero-h1">Центр квантовой<br/>педагогики и психологии</h1>
       <span class="hero-brand">Фуллерен</span>
       <div class="hero-brand-line"></div>
-      <p class="hero-desc">Передовые методы развития личности, основанные на современной нейронауке, психологии и инновационной педагогике.</p>
       <a href="#interview" onclick="smoothScroll('interview')" class="hero-btn">Интервью основателя</a>
       <div class="stats-grid">
         <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Родительских встреч</div></div>
@@ -700,10 +697,10 @@
   </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider" style="display:none"><div class="divider-line"></div></div>
 
-<!-- MEETUPS -->
-<section id="meetups" class="section section-alt">
+<!-- MEETUPS (hidden) -->
+<section id="meetups" class="section section-alt" style="display:none">
   <div class="container">
     <h2>Встречи</h2>
     <div class="meetups-intro">
@@ -820,12 +817,52 @@
 <!-- COURSES -->
 <section id="courses" class="section section-alt">
   <div class="container">
-    <h2>Наши курсы</h2>
+    <h2>Ступени</h2>
     <div class="courses-grid">
+
+      <!-- Подготовка -->
+      <div class="course-card">
+        <div class="course-card-bg" style="background-image:url('/images/shared/podgotovka-card.jpg')"></div>
+        <div class="course-card-overlay"></div>
+        <div class="course-card-content">
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="course-title">Подготовка</div>
+          <div class="course-desc">Приглашаем детей с родителями в наш Центр на развитие навыков, которые помогут быть уверенным не только в школе, но и в жизни</div>
+          <div class="course-footer">
+            <span class="course-age">для детей 5-7 лет</span>
+            <a href="https://www.fullerenclub.ru/podgotovka.html" target="_blank" rel="noopener noreferrer" class="course-btn">
+              Подробнее
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 ступень: начальная школа (Жохов) -->
+      <div class="course-card">
+        <div class="course-card-bg" style="background-image:url('/images/nachalka/hero.jpg')"></div>
+        <div class="course-card-overlay"></div>
+        <div class="course-card-content">
+          <div class="course-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="course-title">1 ступень: начальная школа</div>
+          <div class="course-desc">Система Жохова: 4 года начальной школы за один год, без домашних заданий и оценок. 9 лет безоценочной практики в Центре «Фуллерен».</div>
+          <div class="course-footer">
+            <span class="course-age">1-4 класс</span>
+            <a href="https://www.fullerenclub.ru/nachalka.html" target="_blank" rel="noopener noreferrer" class="course-btn">
+              Подробнее
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!-- 2 ступень: раздельное образование 5-7 класс -->
       <div class="course-card" style="border:1.5px solid rgba(232,160,32,0.5);">
-        <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/files/17da7fdc-ed5a-4a74-9275-4461282a8d75.jpg')"></div>
+        <div class="course-card-bg" style="background-image:url('/images/middleschool/boyclass.jpg')"></div>
         <div class="course-card-overlay"></div>
         <div class="course-card-content">
           <div style="display:inline-flex; align-items:center; gap:6px; background:linear-gradient(130deg,#e8a020,#f5c842); color:#1a1a1a; font-family:'Golos Text',sans-serif; font-size:10px; font-weight:900; letter-spacing:0.08em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:16px; width:fit-content;">🔥 Идёт набор</div>
@@ -841,19 +878,19 @@
         </div>
       </div>
 
-      <!-- Подготовка к школе -->
+      <!-- 3 ступень: выпускники -->
       <div class="course-card">
-        <div class="course-card-bg" style="background-image:url('/images/shared/podgotovka-card.jpg')"></div>
+        <div class="course-card-bg" style="background-image:url('/images/graduate/vypuskniki1.jpg')"></div>
         <div class="course-card-overlay"></div>
         <div class="course-card-content">
           <div class="course-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg>
           </div>
-          <div class="course-title">Подготовка к школе</div>
-          <div class="course-desc">Приглашаем детей с родителями в наш Центр на развитие навыков, которые помогут быть уверенным не только в школе, но и в жизни</div>
+          <div class="course-title">3 ступень: выпускники</div>
+          <div class="course-desc">Промежуточная аттестация за 9 класс на год раньше ОГЭ. Средний балл аттестатов выпускников Центра — от 4,82.</div>
           <div class="course-footer">
-            <span class="course-age">для детей 5-7 лет</span>
-            <a href="https://www.fullerenclub.ru/podgotovka.html" target="_blank" rel="noopener noreferrer" class="course-btn">
+            <span class="course-age">8-9 класс</span>
+            <a href="https://www.fullerenclub.ru/graduate.html" target="_blank" rel="noopener noreferrer" class="course-btn">
               Подробнее
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
             </a>
@@ -861,8 +898,8 @@
         </div>
       </div>
 
-      <!-- Летняя площадка -->
-      <div class="course-card">
+      <!-- Летняя площадка (hidden) -->
+      <div class="course-card" style="display:none">
         <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/2a47d22c-3843-4ffa-ab00-9e0b6df80822.png')"></div>
         <div class="course-card-overlay"></div>
         <div class="course-card-content">
@@ -881,8 +918,8 @@
         </div>
       </div>
 
-      <!-- Летняя площадка 2026 — проектная деятельность -->
-      <div class="course-card">
+      <!-- Летняя площадка 2026 — проектная деятельность (hidden) -->
+      <div class="course-card" style="display:none">
         <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/40c9a1e9-6362-4532-b9f0-2dfd0713e653.png')"></div>
         <div class="course-card-overlay"></div>
         <div class="course-card-content">
@@ -901,8 +938,8 @@
         </div>
       </div>
 
-      <!-- Жоховская программа -->
-      <div class="course-card">
+      <!-- Жоховская программа (hidden) -->
+      <div class="course-card" style="display:none">
         <div class="course-card-bg" style="background-image:url('https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/808eee28-63fb-4c22-9341-db1d76e18e40.png')"></div>
         <div class="course-card-overlay"></div>
         <div class="course-card-content">
@@ -946,7 +983,7 @@
   <div class="container">
     <div class="interview-wrap">
       <div class="interview-img">
-        <img src="https://cdn.poehali.dev/projects/a9a7d0f1-5306-49d9-b225-64fb5cd5fe59/bucket/ad5ab410-5e65-414f-ab8b-f02e02152a96.jpg" alt="Как не потерять ребёнка в погоне за оценками"/>
+        <img src="/images/graduate/oblozhka-intervyu.jpg" alt="Как не потерять ребёнка в погоне за оценками"/>
       </div>
       <h2 class="interview-title">интервью про</h2>
       <p class="interview-desc">семейное образование, гуманную педагогику, свободу ребёнка и взращивание ответственности, авторитеты и их принятие, идеалы, открытость, подростков, важность родителя в образовании ребёнка, поддержку родителей, искренность, страхи детей, справедливость, ответственность учителя, страхи ошибок, внимание детей, благодарность, учителей, партнёрство, государственную аттестацию, вдохновение, — воспитание в многодетной семье, онлайн-образование.</p>
@@ -1062,7 +1099,7 @@
   }
 
   // Intersection observer for active section
-  const sections = ['home','meetups','interview','contacts'];
+  const sections = ['home','interview','contacts'];
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) updateActive(entry.target.id);
